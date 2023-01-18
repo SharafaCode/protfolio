@@ -56,7 +56,7 @@ const Name = () => {
 
           <div className='text-base font-Kaushan font-font_semiMedium tracking-widest text-gray-500'>
                 <p >
-                Front End Developer
+                (Front End Developer)
                 </p>
            </div>
          

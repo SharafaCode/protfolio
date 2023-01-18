@@ -12,7 +12,7 @@ const CTA = () => {
             <div className= {`${themes? ' bg-cta_bg_color' : ' bg-black'} w-full h-20 flex items-center justify-between gap-10 r rounded-2xl p-12 pl-5 pr-5`} >
                 <div className=' flex flex-col items-center justify-center gap-2 w-16'>
                     <img src={home} alt="home" className={themes? null : 'invert'} />
-                    <span className='w-8 h-2 border-b-4 border-primary'></span>
+                    <span className={`${themes? 'border-primary' : 'border-white'} w-8 h-2 border-b-4 `} ></span>
                 </div>
                 <div  className=' flex flex-col items-center justify-center gap-2 text-text_color w-16'>
                    <img src={user} alt="about" className={themes? null : 'invert'}/>
