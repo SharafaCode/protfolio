@@ -3,37 +3,37 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   mode: "jit",
+  darkMode: 'class',
   theme: {
     extend: {
           colors: {
-          primary: "hsl(79, 72%, 55%)",
-          light_primary: "hsl(79, 97%, 77%)",
-          alt_primary: "hsl(79, 67%, 52%)",
-          dark_primary: "hsl(79, 63%, 50%)",
-          secondary: "hsl(180, 12%, 8%)",
-          gray_color: "rgba(202, 203, 203, 85%)",
-          title_color: "hsl(180, 4%, 98%)",
-          black_title_color: "hsl(180, 4%, 12%)",
-          text_color: "hsl(180, 4%, 72%)",
-          light_text_color: "hsl(180, 4%, 65%)",
+          primary: "#080801",
+          gray_color: "rgba(163, 163, 163, 0.900)",
+          moon_color: "#efefeff5",
+          text_color: "#efefef",
+          cta_bg_color: "#efefeff5",
+ 
           },
           fontFamily: {
-          redhat: ["Red Hat Display', sans-serif"],
+          Abril: "Abril Fatface, cursive",
+          Kaushan: "Kaushan Script, cursive",
           },
   
           fontSize: {
   
-          sm:["clamp(1.4rem, 10vw, 1.8rem)"],
+          sm:["clamp(1.4rem, 10vw, 1.6rem)"],
   
           base:["clamp(1.6rem, 10vw, 2rem)" ],
   
           lg:["clamp(2rem, 10vw, 3rem)" ],
   
-          xl:["clamp(3rem, 10vw, 4rem)"],
+          xl:["clamp(3.73rem, 10vw, 4rem)"],
     
-          "2xl":["clamp(4rem, 10vw, 5rem)"],
+          "1xl":["clamp(4.19rem, 10vw, 4.8rem)"],
+
+          "2xl":["clamp(4.6rem, 10vw, 5rem)"],
   
-          "3xl":["clamp(4rem, 10vw, 6rem)"],
+          "3xl":["clamp(4.8rem, 10vw, 6rem)"],
   
           "4xl":["clamp(5rem, 10vw, 7rem)"],
 
@@ -48,18 +48,27 @@ module.exports = {
       },
       width:{
 
-        mb_width: "90%",
-        lg_width: "85%",
-        xlg_width: "80%",
-        navbox_width: '28rem',
-        img_ss_width: '66rem',
-        img_width: '66rem',
-        img_xl_width: '102rem',
-
+        '90': "90%",
+        'vh-90': "90vh",
+        '34': '34rem',
+        '85': 'calc(100% - 34rem)'
       },
       height:{
-        height: "90vh",
+        '05': "5vh",
+        '90': "90vh",
+        '95': "95vh",
+        '87': "87vh",
+        '80': "80vh",
+        '85': "85vh",
+        '70': "70vh",
+        '75': "75vh",
 
+      },
+
+      margin:{
+        '29': '29rem',
+        '37': '37rem',
+        '46': '46rem',
       },
 
       screens: {
