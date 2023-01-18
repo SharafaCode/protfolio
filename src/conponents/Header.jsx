@@ -23,7 +23,7 @@ useEffect(()=>{
         <nav className='w-90 m-auto'>
             <div className=' flex items-center justify-between p-0 pt-6 pb-6'>
               <div>
-                <img src={Profile} alt="profile" className='w-16 h-16 rounded-2xl object-cover' />
+                <img src={Profile} alt="profile" className='w-16 h-16 rounded-2xl object-cover xs:w-20 xs:h-20' />
 
                 <div className='hidden'>
                   <h1 className='text-sm'>
