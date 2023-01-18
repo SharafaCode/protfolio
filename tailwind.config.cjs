@@ -8,7 +8,7 @@ module.exports = {
     extend: {
           colors: {
           primary: "#080801",
-          gray_color: "rgba(163, 163, 163, 0.900)",
+          gray_color: "#808080",
           moon_color: "#efefeff5",
           text_color: "#efefef",
           cta_bg_color: "#efefeff5",
@@ -21,7 +21,7 @@ module.exports = {
   
           fontSize: {
   
-          sm:["clamp(1.4rem, 10vw, 1.6rem)"],
+          sm:["clamp(.8rem, 10vw, 1.6rem)"],
   
           base:["clamp(1.6rem, 10vw, 2rem)" ],
   
