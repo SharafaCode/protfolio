@@ -7,7 +7,7 @@ const Skills = () => {
 
 
   return (
-    <section className=' w-full min-h-screen'>
+    <section className=' w-full min-h-screen' id='skills'>
         <article className=' w-90 m-auto flex flex-col gap-0 item-left justify-center h-90'>
             <div className=' flex flex-col gap-10 item-left justify-center'>
                 <div>

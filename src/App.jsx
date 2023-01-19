@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useGlobalContext } from "./conponents/context";
 
 import Home from "./conponents/Home";
+import Portfolio from "./conponents/Portfolio";
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
 
   return (
     <div className={themes? 'darkTheme' : 'lightTheme'}>
-      <Home/>
+      {/* <Home/> */}
+      <Portfolio/>
     </div>
   )
 }

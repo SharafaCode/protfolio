@@ -9,6 +9,7 @@ module.exports = {
           colors: {
           primary: "#080801",
           gray_color: "#808080",
+          lightgray_color: "rgba(128, 128, 128, 0.200)",
           moon_color: "#efefeff5",
           text_color: "#efefef",
           cta_bg_color: "#efefeff5",
@@ -22,6 +23,8 @@ module.exports = {
   
           fontSize: {
   
+          xs:["clamp(.8rem, 10vw, 1.2rem)"],
+
           sm:["clamp(.8rem, 10vw, 1.6rem)"],
   
           base:["clamp(1.6rem, 10vw, 2rem)" ],

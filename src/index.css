@@ -41,10 +41,80 @@ body{
  
   font-family: Poppins, sans-serif;
 
+
 }
 
-.width{
-  color: #808080a1;
+
+::-webkit-scrollbar{
+  width: .5rem;
+
+
+}
+::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(197, 197, 197, 0.562);
+  border-radius: 10px;
+  background: rgb(128, 128, 128);
+  
+ 
+
+
+}
+::-webkit-scrollbar-thumb{
+   background-image: linear-gradient(to right top, #e1e6ee, #b3e8ff, #0d666b, #b5ffdd, #9ca092);
+  	border-radius: 10px;
+    height: 1px;
+}
+
+/* .colors{
+  background: rgba(128, 128, 128, 0.164);
+  
+} */
+
+/*********** PROJECT SECTION GRID CODE AND MEDIA QUERY **********/
+
+.box-shadow{
+-webkit-box-shadow: 0px 0px 18px -10px rgba(179,179,179,1);
+-moz-box-shadow: 0px 0px 18px -10px rgba(179,179,179,1);
+box-shadow: 0px 0px 18px -10px rgba(179,179,179,1);
+}
+
+.custom-grid{
+  display: grid;
+  justify-content: center;
+
+  row-gap: 3.2rem;
+  column-gap: 3.2rem;
+}
+
+.custom-grid .span-cols > img{
+  border-radius: 2.6rem;
+}
+
+
+@media screen and (min-width: 600px) {
+  .custom-grid{
+  grid-template-columns: repeat(3, 1fr);
+  
+ 
+}
+
+.custom-grid > .span-cols:nth-child(1){
+
+  grid-column-start: 1;
+  grid-column-end: 3;
   
 }
 
+.custom-grid > .span-cols:nth-child(odd){
+  grid-row-start: span 2;
+  
+  
+  
+}
+
+
+
+}
+
+
+/*********** PROJECT SECTION GRID CODE AND MEDIA QUERY **********/

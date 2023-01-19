@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
 
-    <section className=' w-full min-h-screen'>
+    <section className=' w-full min-h-screen' id='about'>
         <article className=' w-90 m-auto flex flex-col items-left justify-center h-90 gap-10'>
             <div className=' flex flex-col items-left justify-center gap-10'>
                 <div>
