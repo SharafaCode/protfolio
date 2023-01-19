@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import TextShpere from './TextShpere/TextShpere';
+import { useGlobalContext } from './context';
 
 const Skills = () => {
+    const {themes} = useGlobalContext();
+
+
   return (
     <section className=' w-full min-h-screen'>
-        <article className=' w-90 m-auto'>
-            <div className=' flex flex-col gap-10 item-left justify-center h-90'>
+        <article className=' w-90 m-auto flex flex-col gap-0 item-left justify-center h-90'>
+            <div className=' flex flex-col gap-10 item-left justify-center'>
                 <div>
                     <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide'>
                         <span>S</span>
@@ -40,10 +45,15 @@ const Skills = () => {
 
                     </p>
                     <p>
-                        Visit my <a href="" className=' text-text_color cursor-pointer'>LinkedIn</a> profile for more details or just <a href="" className=' text-text_color cursor-pointer'>Contact</a> me.
+                        Visit my <a href="" className= {` ${themes? 'text-text_color' : 'text-primary'}  cursor-pointer font-font_semiMedium`} >LinkedIn</a> profile for more details or just <a href="" className= {` ${themes? 'text-text_color' : 'text-primary'}  cursor-pointer font-font_semiMedium`} >Contact</a> me.
                     </p>
                 </div>
             </div>
+
+            <div>
+                <TextShpere/>
+            </div>
+
 
         </article>
     </section>

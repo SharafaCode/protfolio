@@ -2,10 +2,12 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 import Name from './Name';
 import CTA from './CTA';
+import Header from './Header';
 
 const Hero = () => {
   return (
    <section className='w-full h-95 overflow-hidden relative'>
+    <Header/>
     <article className=' w-90 m-auto relative'>
       <div className=' absolute top-0 left-0 mt-20'>
         <div className='hidden xs:flex items-center justify-center font-Kaushan font-font_medium text-base text-gray-500 select-none'>

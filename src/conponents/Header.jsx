@@ -19,10 +19,10 @@ useEffect(()=>{
 
 
   return (
-    <header className='w-full h-05'>
+    <header className=' fixed top-0 right-0 w-full h-05 lg:w-85'>
         <nav className='w-90 m-auto'>
             <div className=' flex items-center justify-between p-0 pt-6 pb-6'>
-              <div>
+              <div className=' lg:opacity-0'>
                 <img src={Profile} alt="profile" className='w-16 h-16 rounded-2xl object-cover xs:w-20 xs:h-20' />
 
                 <div className='hidden'>

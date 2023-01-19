@@ -1,4 +1,4 @@
-navLinks = [
+const links = [
     {
       id: 1,
       title: "About",
@@ -15,6 +15,14 @@ navLinks = [
       id: 4,
       title: "Contact",
     },
+    {
+      id: 5,
+      title: "WorkOut",
+    },
+    {
+      id: 6,
+      title: "Books",
+    },
   ];
 
-  export default navLinks
+  export default links
