@@ -26,6 +26,7 @@ const TextShpere = () => {
         "GIT",
         "GITHUB",
         "Taillwind",
+        "Gsap",
       ];
 
       const options = {
@@ -43,7 +44,7 @@ const TextShpere = () => {
     <>
       <div className=" mt-16 xs:-mt-0 tracking-widest text-shpere">
         {/* span tag className must be "tagcloud"  */}
-        <span className= {`${themes? 'text-text_color' : 'text-primary'} tagcloud `}></span>
+        <span className= {`${themes? 'text-text_color' : 'text-primary'} tagcloud capitalize `}></span>
       </div>
     </>
   );

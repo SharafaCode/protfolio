@@ -25,7 +25,7 @@ const NavLinks = () => {
                 {
                     links.map((item, index)=>{
                         return(
-                            <div>
+                            <div key={index}>
                                 <ul key={item.id}>
                                     <li className=' cursor-pointer hover:text-text_color'>
                                         {item.title}
