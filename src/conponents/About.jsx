@@ -9,7 +9,7 @@ const About = () => {
                 <div>
                     <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide'>
                         <span>M</span>
-                        <span>y</span>
+                        <span>e</span>
                         <span>,</span>
                         <span> M</span>
                         <span>y</span>

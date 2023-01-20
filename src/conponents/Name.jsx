@@ -2,9 +2,9 @@ import React from 'react'
 
 const Name = () => {
   return (
-<section className='w-full h-95 overflow-hidden'>
-    <article className='w-mb_width m-auto'>      
-      <div className='flex flex-col items-left justify-center h-screen xs:h-85 gap-5'>
+<section className='w-full min-h-screen overflow-hidden'>
+    <article className='w-90 m-auto flex flex-col items-left justify-center h-screen '>      
+      <div className='flex flex-col items-left justify-center gap-5'>
         <div  className='translate-y-3 xs:-translate-y-3'>
           <div className='border-b-2 w-32 border-gray-500'></div>
         </div>
@@ -59,10 +59,6 @@ const Name = () => {
                 (Front End Developer)
                 </p>
            </div>
-         
-          <div className=' flex items-end justify-end translate-y-5 '>
-            <div className='border-b-2 w-32 border-gray-500'></div>
-          </div>
 
         </div>
      

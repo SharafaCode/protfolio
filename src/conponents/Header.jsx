@@ -1,50 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { Icon } from '@iconify/react';
+import menu from '../assets/menu.png';
 import Profile from '../assets/profile.jpg';
 import { useGlobalContext } from './context';
+import CTA from './CTA';
 
 const Header = () => {
 
 
-  const {themes, setThemes} = useGlobalContext();
-
- 
-useEffect(()=>{
-
-
-  
-},[themes])
-
-  
+  const {themes, setThemes, menutoggle, setMenuToggle} = useGlobalContext();
 
 
   return (
-    <header className=' fixed top-0 right-0 w-full h-05 lg:w-85'>
+    <header className= {` ${themes? 'bg-primary text-text_color' : 'bg-white text-primary'} fixed top-0 right-0 w-full h-26 lg:w-85 border-b border-gray_color overflow-hidden pt-3 pb-3 z-50`} >
         <nav className='w-90 m-auto'>
-            <div className=' flex items-center justify-between p-0 pt-6 pb-6'>
-              <div className=' lg:opacity-0'>
+            <div className=' flex items-center justify-between h-20'>
+              <div className=' lg:hidden'>
                 <img src={Profile} alt="profile" className='w-16 h-16 rounded-2xl object-cover xs:w-20 xs:h-20' />
-
-                <div className='hidden'>
-                  <h1 className='text-sm'>
-                      Bashiru Sharafa
-
-                  </h1>
-                  <p>
-                    Sharafaoluwatobi@gmail.com
-                  </p>
-                </div>
               </div>
 
               <div>
                 <h1 className='text-base'>
                   Hello
-
                 </h1>
               </div>
               
-              <div >
-                <button className= {`${themes? ' bg-gray-500' : 'bg-white'} border-2 w-20 h-109 rounded-full text-base flex items-center`} onClick={()=>{
+              <div className=' hidden lg:block'>
+                <button className= {`${themes? ' bg-gray-500' : 'bg-secondary'} border-2 w-20 h-109 rounded-full text-base flex items-center`} onClick={()=>{
                   setThemes((prev)=>!prev)
                 }}>
                   {
@@ -63,8 +45,23 @@ useEffect(()=>{
                   }
                 </button>
               </div>
+
+              <div className=' lg:hidden cursor-pointer' onClick={()=> setMenuToggle((prev)=> !prev)}>
+              <img src={menu} alt="menu" className={`${themes? ' invert' : ' invert-0'} w-10`} />
+              </div>
+                
             </div>
         </nav>
+
+        {
+          menutoggle &&
+          <div className=  'fixed right-0' >
+            <CTA/>
+          </div>
+
+        }
+
+
     </header>
   )
 }

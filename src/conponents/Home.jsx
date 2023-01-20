@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom';
-import { useGlobalContext } from './context';
+
 import Header from './Header'
-import Hero from './Hero';
+import Name from './Name';
 import About from "./About";
 import Skills from "./Skills";
 import Contact from "./Contact";
@@ -11,22 +11,25 @@ import Books from './Books';
 import Portfolio from './Portfolio';
 import NavLinks from './NavLinks';
 
+import CTA from './CTA';
+
 
 const Home = () => {
 
-  const {themes} = useGlobalContext();
+ 
 
   return (
-    <div className=' w-full min-h-screen flex items-center'>
+    <div className=' w-full min-h-screen flex flex-wrap justify-center'>
 
 
-        <aside className= 'lg:w-34 lg:min-h-screen lg:border-r-2' >
+        <aside className= 'lg:w-34 lg:min-h-screen lg:border-r-2 lg:overflow-hidden' >
           <NavLinks/>
   
         </aside>
-        <main className= ' w-full min-h-screen lg:w-85 lg:min-h-screen lg:border-r-2'>
+        <main className= ' w-full min-h-screen lg:w-85 z-50 '>
+          <Header/>
           <Routes>
-            <Route path='/' element={<Hero/>}/>
+            <Route path='/' element={<Name/>}/>
             <Route path='about' element={<About/>}/>
             <Route path='skills' element={<Skills/>}/>
             <Route path='portfolio' element={<Portfolio/>}/>
@@ -34,6 +37,7 @@ const Home = () => {
             <Route path='workout' element={<WorkOut/>}/>
             <Route path='books' element={<Books/>}/>
           </Routes>
+
   
           
 

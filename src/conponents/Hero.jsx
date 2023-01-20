@@ -1,29 +1,27 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import Name from './Name';
-import CTA from './CTA';
-import Header from './Header';
 
 const Hero = () => {
   return (
-   <section className='w-full h-95 overflow-hidden relative'>
-    <Header/>
+   <section className='w-full h-86 relative  overflow-hidden'>
+ 
     <article className=' w-90 m-auto relative'>
-      <div className=' absolute top-0 left-0 mt-20'>
+      <div className=' absolute top-0 left-0 pt-28'>
         <div className='hidden xs:flex items-center justify-center font-Kaushan font-font_medium text-base text-gray-500 select-none'>
         <Icon icon="material-symbols:arrow-back-ios" />
            head
         <Icon icon="material-symbols:arrow-forward-ios" />
         </div>
       </div>
-      <div className=' absolute top-0 right-0 -translate-x-48 mt-32'>
+      <div className=' absolute top-0 right-0 pt-48'>
         <div className='hidden xs:flex items-center justify-center font-Kaushan font-font_medium text-base text-gray-500 select-none'>
         <Icon icon="material-symbols:arrow-back-ios" />
            body
         <Icon icon="material-symbols:arrow-forward-ios" />
         </div>
       </div>
-      <div className=' absolute top-0 right-0 mt-64'>
+      <div className=' absolute top-0 right-0 pt-72'>
         <div className='hidden xs:flex items-center justify-center font-Kaushan font-font_medium text-base text-gray-500 select-none'>
         <Icon icon="material-symbols:arrow-back-ios" />
            h1
@@ -42,7 +40,7 @@ const Hero = () => {
         <Name/>
       </div>
 
-      <div className=' absolute bottom-0 left-0 -translate-y-80'>
+      <div className=' absolute bottom-0 left-0 -translate-y-72'>
         <div className='hidden xs:flex items-center justify-center font-Kaushan font-font_medium text-base text-gray-500 select-none'>
         <Icon icon="material-symbols:arrow-back-ios" />
            /p
@@ -56,24 +54,19 @@ const Hero = () => {
         <Icon icon="material-symbols:arrow-forward-ios" />
         </div>
       </div>
-      <div className=' absolute bottom-0 left-0 translate-x-48 -translate-y-36'>
+      <div className=' absolute bottom-0 left-0  -translate-y-36'>
         <div className='hidden xs:flex items-center justify-center font-Kaushan font-font_medium text-base text-gray-500 select-none'>
         <Icon icon="material-symbols:arrow-back-ios" />
            /body
         <Icon icon="material-symbols:arrow-forward-ios" />
         </div>
       </div>
-      <div className=' absolute bottom-0 right-0 -translate-y-16'>
+      <div className=' absolute bottom-0 right-0 -translate-y-32 xs:-translate-y-40'>
         <div className='hidden xs:flex items-center justify-center font-Kaushan font-font_medium text-base text-gray-500 select-none'>
         <Icon icon="material-symbols:arrow-back-ios" />
            /head
         <Icon icon="material-symbols:arrow-forward-ios" />
         </div>
-      </div>
-
-      <div>
-        <CTA/>
-
       </div>
 
 

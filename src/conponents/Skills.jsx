@@ -7,11 +7,11 @@ const Skills = () => {
 
 
   return (
-    <section className=' w-full min-h-screen' id='skills'>
-        <article className=' w-90 m-auto flex flex-col gap-0 item-left justify-center h-90'>
-            <div className=' flex flex-col gap-10 item-left justify-center'>
+    <section className=' w-full min-h-screen  z-50' id='skills'>
+        <article className='w-90 m-auto flex flex-col pt-10  md:flex-row'>
+            <div className=' flex flex-col gap-10 item-left justify-center lg:-translate-y-10 xl:lg:translate-y-8'>
                 <div>
-                    <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide'>
+                    <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide ss:text-5xl'>
                         <span>S</span>
                         <span>k</span>
                         <span>i</span>
@@ -19,6 +19,7 @@ const Skills = () => {
                         <span>l</span>
                         <span>s</span>
                         <span> &</span>
+                        <br />
                         <span> E</span>
                         <span>x</span>
                         <span>p</span>
@@ -50,7 +51,7 @@ const Skills = () => {
                 </div>
             </div>
 
-            <div>
+            <div className=' md:pt-28 z-50'>
                 <TextShpere/>
             </div>
 

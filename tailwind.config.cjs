@@ -8,6 +8,7 @@ module.exports = {
     extend: {
           colors: {
           primary: "#080801",
+          secondary: "#ebebeb",
           gray_color: "#808080",
           lightgray_color: "rgba(128, 128, 128, 0.200)",
           moon_color: "#efefeff5",
@@ -19,13 +20,16 @@ module.exports = {
           fontFamily: {
           Abril: "Abril Fatface, cursive",
           Kaushan: "Kaushan Script, cursive",
+          herr: "Herr Von Muellerhoff, cursive",
           },
   
           fontSize: {
   
-          xs:["clamp(.8rem, 10vw, 1.2rem)"],
+          xs:["clamp(.8rem, 10vw, 1.3rem)"],
 
           sm:["clamp(.8rem, 10vw, 1.6rem)"],
+
+          sbase:["clamp(.8rem, 10vw, 1.8rem)"],
   
           base:["clamp(1.6rem, 10vw, 2rem)" ],
   
@@ -53,26 +57,48 @@ module.exports = {
       width:{
 
         '90': "90%",
+        '60': "60%",
+        '70': "70%",
         'vh-90': "90vh",
         '34': '34rem',
-        '85': 'calc(100% - 34rem)'
+        '85': 'calc(100% - 34rem)',
+         '258': '258rem',
+
       },
       height:{
+
         '05': "5vh",
         '90': "90vh",
         '95': "95vh",
         '87': "87vh",
+        '86': "86.5vh",
+        '86': "86vh",
         '80': "80vh",
         '85': "85vh",
         '70': "70vh",
         '75': "75vh",
+    
+       
 
       },
 
       margin:{
+        '6': '6.4rem',
         '29': '29rem',
         '37': '37rem',
         '46': '46rem',
+        '32': '32.4rem',
+      },
+      padding:{
+        
+        '7': '7.4rem',
+        '10': '10rem',
+        '29': '29rem',
+        '40': '40.6rem',
+        '32': '32.4rem',
+        '37': '37rem',
+
+
       },
 
       screens: {
@@ -82,7 +108,7 @@ module.exports = {
           sm: "768px",
           md: "1024px",
           lg: "1200px",
-          xl: "1400px",
+          xl: "1315px",
 
       },
 

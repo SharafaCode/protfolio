@@ -11,6 +11,7 @@ export const AppProvider = ({children})=> {
    
 
     const [themes, setThemes] = useState(getTheme);
+    const [menutoggle, setMenuToggle] = useState(false)
 
 
     useEffect(()=>{
@@ -19,7 +20,7 @@ export const AppProvider = ({children})=> {
     },[themes])
     return(
         <AppContext.Provider value={{
-             themes, setThemes, 
+             themes, setThemes, menutoggle, setMenuToggle
         }}>
             {
                 children
