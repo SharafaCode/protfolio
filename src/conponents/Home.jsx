@@ -19,10 +19,10 @@ const Home = () => {
  
 
   return (
-    <div className=' w-full min-h-screen flex flex-wrap justify-center'>
+    <div className=' w-full min-h-screen flex flex-wrap justify-center z-50'>
 
 
-        <aside className= 'lg:w-34 lg:min-h-screen lg:border-r-2 lg:overflow-hidden' >
+        <aside className= 'lg:w-34 lg:min-h-screen shadow-md lg:overflow-hidden' >
           <NavLinks/>
   
         </aside>

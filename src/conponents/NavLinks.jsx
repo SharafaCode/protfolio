@@ -2,11 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Profile from '../assets/profile.jpg';
 import links from './links';
-import user from '../assets/user.png';
-import letter from '../assets/letter.png';
-import home from '../assets/home.png';
-import skills from '../assets/skills.png';
-import portfolio from '..//assets/briefcase.png';
 import { useGlobalContext } from './context';
 
 const NavLinks = () => {
@@ -40,10 +35,17 @@ const NavLinks = () => {
                     links.map((item, index)=>{
                         return(
                             <div key={index}>
-                                <ul key={item.id}>
+                                <ul key={item.id}  className=' flex items-center justify-left overflow-y-hidden'>
                                     <li className=' cursor-pointer hover:text-text_color'>
-                                        <Link to={item.path}>
+                                        <Link to={item.path} className='flex items-center justify-center gap-8'>
+                                        <div>
+                                          <img src={item.img} alt={item.title} className=' w-10 invert' />
+
+                                        </div>
+                                        <div>
                                             {item.title}
+
+                                        </div>
                                         </Link>
                                     </li>
                                 </ul>

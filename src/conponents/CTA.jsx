@@ -12,7 +12,7 @@ const CTA = () => {
   return (
     <div className=' w-full mt-3 lg:w-85 lg:hidden z-50' >
     
-            <div className= {`${themes? ' bg-cta_bg_color text-primary' : ' bg-black text-text_color'} w-28 h-90 flex flex-col items-center pt-28 gap-10 rounded-tl-3xl rounded-bl-3xl text-xs font-font_semiMedium tracking-wider`} >
+            <div className= {`${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} w-28 h-90 flex flex-col items-center pt-28 gap-10 rounded-tl-3xl rounded-bl-3xl text-xs tracking-wider`} >
 
                 <div className=' flex flex-col items-center justify-center gap-2 cursor-pointer '>
                     <Link to='/'>
