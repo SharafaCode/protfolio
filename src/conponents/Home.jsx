@@ -8,8 +8,9 @@ import Skills from "./Skills";
 import Contact from "./Contact";
 import WorkOut from './WorkOut';
 import Books from './Books';
-import Portfolio from './Portfolio';
+import Portfolio from './Projects';
 import NavLinks from './NavLinks';
+import ProjectDetails from './ProjectDetails';
 
 import CTA from './CTA';
 
@@ -33,6 +34,7 @@ const Home = () => {
             <Route path='about' element={<About/>}/>
             <Route path='skills' element={<Skills/>}/>
             <Route path='portfolio' element={<Portfolio/>}/>
+             <Route path='/project/:titles' element={< ProjectDetails/>}/>
             <Route path='contact' element={<Contact/>}/>
             <Route path='workout' element={<WorkOut/>}/>
             <Route path='books' element={<Books/>}/>

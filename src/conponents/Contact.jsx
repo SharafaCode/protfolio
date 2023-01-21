@@ -3,9 +3,9 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <section className=' w-full min-h-screen' id='contact'>
+    <section className=' w-full min-h-screen overflow-hidden' id='contact'>
         <article className=' w-90 m-auto flex flex-col items-left justify-center gap-14 pt-10'>
-            <div className='grid md:grid-cols-2 gap-20 md:pb-6'>
+            <div className='grid md:grid-cols-2 gap-20 md:pb-2'>
 
                 <div className=' flex flex-col items-left justify-center gap-10'>
                     <div className=' flex flex-col items-left justify-center gap-14'>

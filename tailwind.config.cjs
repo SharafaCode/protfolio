@@ -14,7 +14,9 @@ module.exports = {
           moon_color: "#efefeff5",
           text_color: "#efefef",
           cta_bg_color: "#efefeff5",
-          input_bg_color: 'rgba(128, 128, 128, 0.400)'
+          input_bg_color: 'rgba(128, 128, 128, 0.400)',
+          project_dark_color: 'rgba(0, 0, 0, 0.445)',
+          project_light_color: 'rgba(0, 0, 0, 0.445)',
  
           },
           fontFamily: {

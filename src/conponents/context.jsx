@@ -1,4 +1,6 @@
-import React, { useContext, useState, useEffect } from "react"
+import React, { useContext, useState, useEffect } from "react";
+const url = 'http://127.0.0.1:5173/portData/'
+console.log(url);
 
 const getTheme = ()=> {
     return JSON.parse(localStorage.getItem('theme')) || true;
