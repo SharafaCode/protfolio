@@ -21,21 +21,27 @@ const CTA = () => {
 
             <div className= ' w-screen h-90 fixed right-0 left-0 bottom-0 bg-lightgray_color' >
 
-                <div className={` ${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} w-28 h-90 flex flex-col items-center pt-14 gap-3  rounded-tl-3xl rounded-bl-3xl text-xs tracking-wide fixed right-0  `}  >
+                <div className={` ${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} w-36 h-90 flex flex-col items-center justify-center pt-14 gap-3  rounded-tl-3xl rounded-bl-3xl text-xs tracking-wide fixed right-0  `}  >
                     {
-                        links.map((items, index) => {
-                            const {id, title, path, img} = items
+                        links.map((item, index) => {
+                            
 
                             return (
-                                <React.Fragment key={id}>
-                                    <div className=' flex flex-col items-center justify-center gap-2 cursor-pointer ' id='mobilelinkstransition' onClick={()=> setMenuToggle(false)}>
-                                        <Link to={path}>
-                                            <img src={img} alt="home" className={`${themes? null : 'invert'} w-9` }  />
-                                        </Link>
-                                        <span >
-                                            {title}
-                                        </span>
-                                    </div>
+                                <React.Fragment key={index}>
+                                    <div>
+                                    <ul id='large-navlink-transition'>
+                                        <li className= ' cursor-pointer' >
+                                            <Link to={item.path} className=' flex flex-col items-center justify-center'>
+                                                <div>
+                                                <img src={item.img} alt={item.title} className= {`${themes? 'invert-0' : ' invert'} w-9`} />
+                                                </div>
+                                                <div>
+                                                    {item.title}
+                                                </div>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
                                 </React.Fragment>
                             )
                         })

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Route, Routes } from 'react-router-dom';
 
 import Header from './Header'
@@ -11,44 +11,41 @@ import Books from './Books';
 import Projects from './Projects';
 import NavLinks from './NavLinks';
 import ProjectDetails from './ProjectDetails';
-
-import CTA from './CTA';
-
+// import { useGlobalContext } from './context';
+// import PreLoader from './PreLoader';
 
 const Home = () => {
+  // const {IsLoading, setIsLoading} = useGlobalContext();
+
+      return (
+  
+    
+        <div className=' w-full min-h-screen flex flex-wrap justify-center z-50'>
+            <aside className= 'lg:w-34 lg:min-h-screen lg:overflow-hidden borders shadow-md' >
+              <NavLinks/>
+            </aside>
+            <main className= ' w-full min-h-screen lg:w-85 z-50 '>
+              <Header/>
+              <Routes>
+                <Route path='/' element={<Name/>}/>
+                <Route path='about' element={<About/>}/>
+                <Route path='skills' element={<Skills/>}/>
+                <Route path='projects' element={<Projects/>}/>
+                <Route path='/projects/:titles' element={< ProjectDetails/>}/>
+                <Route path='contact' element={<Contact/>}/>
+                <Route path='workout' element={<WorkOut/>}/>
+                <Route path='books' element={<Books/>}/>
+              </Routes>
+            </main>
+        </div>
+      )
+
+
+
+
 
  
 
-  return (
-    <div className=' w-full min-h-screen flex flex-wrap justify-center z-50'>
-
-
-        <aside className= 'lg:w-34 lg:min-h-screen lg:overflow-hidden borders shadow-md' >
-          <NavLinks/>
-  
-        </aside>
-        <main className= ' w-full min-h-screen lg:w-85 z-50 '>
-          <Header/>
-          <Routes>
-            <Route path='/' element={<Name/>}/>
-            <Route path='about' element={<About/>}/>
-            <Route path='skills' element={<Skills/>}/>
-            <Route path='projects' element={<Projects/>}/>
-             <Route path='/projects/:titles' element={< ProjectDetails/>}/>
-            <Route path='contact' element={<Contact/>}/>
-            <Route path='workout' element={<WorkOut/>}/>
-            <Route path='books' element={<Books/>}/>
-          </Routes>
-
-  
-          
-
-        </main>
-            
-
-       
-    </div>
-  )
 }
 
 export default Home
