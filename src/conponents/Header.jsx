@@ -11,8 +11,11 @@ const Header = () => {
   const {themes, setThemes, menutoggle, setMenuToggle} = useGlobalContext();
 
 
+  menutoggle? document.body.style.overflowY ='hidden' : document.body.style.overflowY = 'auto';
+
+
   return (
-    <header className= {` ${themes? 'bg-primary text-text_color' : 'bg-white text-primary'} fixed top-0 right-0 w-full h-26 lg:w-85 overflow-hidden pt-3 pb-3 z-50 shadow-md`} >
+    <header className= {` ${themes? 'bg-primary text-text_color' : 'bg-white text-primary'} fixed top-0 right-0 w-full h-26 lg:w-85 overflow-hidden pt-3 pb-3 z-50 border-b border-b-gray-500`} >
         <nav className='w-90 m-auto'>
             <div className=' flex items-center justify-between h-20'>
               <div className=' lg:hidden'>
@@ -55,7 +58,7 @@ const Header = () => {
 
         {
           menutoggle &&
-          <div className= {` fixed right-0 `}>
+          <div >
             <CTA/>
           </div>
 

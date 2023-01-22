@@ -10,13 +10,14 @@ module.exports = {
           primary: "#080801",
           secondary: "#ebebeb",
           gray_color: "#808080",
-          lightgray_color: "rgba(128, 128, 128, 0.200)",
+          lightgray_color: "rgba(128, 128, 128, 0.473)",
+          lightblue_color: "rgba(72, 112, 153, 0.612)",
           moon_color: "#efefeff5",
           text_color: "#efefef",
           cta_bg_color: "#efefeff5",
           input_bg_color: 'rgba(128, 128, 128, 0.400)',
           project_dark_color: 'rgba(0, 0, 0, 0.445)',
-          project_light_color: 'rgba(0, 0, 0, 0.445)',
+
  
           },
           fontFamily: {
@@ -64,7 +65,11 @@ module.exports = {
         'vh-90': "90vh",
         '34': '34rem',
         '85': 'calc(100% - 34rem)',
-         '258': '258rem',
+         '50': '50rem',
+         '53': '53rem',
+         '58': '58rem',
+         '68': '68rem',
+         '70': '70rem',
 
       },
       height:{
@@ -73,12 +78,15 @@ module.exports = {
         '90': "90vh",
         '95': "95vh",
         '87': "87vh",
-        '86': "86.5vh",
-        '86': "86vh",
+        // '86': "86.5vh",
+        // '86': "86vh",
         '80': "80vh",
         '85': "85vh",
-        '70': "70vh",
-        '75': "75vh",
+        // '40': "40vh",
+        // '45': "47rem",
+        // '48': "48rem",
+        // '70': "70vh",
+        // '75': "75vh",
     
        
 
@@ -107,6 +115,7 @@ module.exports = {
 
           xs: "360px",
           ss: "500px",
+          xsm: "600px",
           sm: "768px",
           md: "1024px",
           lg: "1200px",

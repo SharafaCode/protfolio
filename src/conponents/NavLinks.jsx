@@ -7,8 +7,10 @@ import { useGlobalContext } from './context';
 const NavLinks = () => {
     const {themes} = useGlobalContext()
   return (
-    <aside className={` ${themes? 'bg-primary text-text_color' : ' bg-white text-primary'} hidden lg:block lg:overflow-x-hidden lg:fixed lg:top-0 left-0 bottom-0`}>
-        <article className=' w-70 m-auto pl-6'>
+
+    <aside className={` ${themes? 'bg-primary text-text_color' : ' bg-white text-primary'} hidden lg:block lg:overflow-hidden lg:fixed lg:top-0 lg:left-0 lg:bottom-0 lg:z-50 lg:pl-20`}>
+        <article>
+
             <div className='h-05'>
                 <Link to='/'>
                     <div className='flex flex-col items-left justify-center gap-2  pt-9 '>
@@ -29,38 +31,38 @@ const NavLinks = () => {
                     </a>
                 </p>
             </div>
-        <article className=' flex flex-col items-left justify-center pt-72 gap-10'>
-            <div className=' flex flex-col items-left justify-center gap-10 text-sbase tracking-widest font-font_medium text-gray_color font-Abril '>
-                {
-                    links.map((item, index)=>{
-                        return(
-                            <div key={index}>
-                                <ul key={item.id}  className=' flex items-center justify-left overflow-y-hidden'>
-                                    <li className=' cursor-pointer hover:text-text_color'>
-                                        <Link to={item.path} className='flex items-center justify-center gap-8'>
-                                        <div>
-                                          <img src={item.img} alt={item.title} className=' w-10 invert' />
 
-                                        </div>
-                                        <div>
-                                            {item.title}
+            <article className=' flex flex-col gap-10 pt-72'>
+                <div className=' flex flex-col items-left justify-center gap-10 text-sbase tracking-widest font-font_medium text-gray_color font-Abril '>
+                    {
+                        links.map((item, index)=>{
+                            return(
+                                <div key={index}>
+                                    <ul key={item.id}  className=' flex items-center justify-left overflow-y-hidden'>
+                                        <li className= 'cursor-pointer' >
+                                            <Link to={item.path} className='flex items-center justify-center gap-8'>
+                                            <div>
+                                            <img src={item.img} alt={item.title} className= {`${themes? 'invert' : ' invert-0'} w-10`} />
 
-                                        </div>
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-            <div className=' absolute bottom-0 -translate-y-3'>
-                <p className=' text-sm text-blue-500 select-none font-Kaushan tracking-widest'>
-                    Bash.codify...............
-                </p>
-            </div>
+                                            </div>
+                                            <div>
+                                                {item.title}
+                                            </div>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                <div className=' absolute bottom-0 -translate-y-3'>
+                    <p className=' text-sm text-blue-500 select-none font-Kaushan tracking-widest'>
+                        Bash.codify...............
+                    </p>
+                </div>
 
-        </article>
+            </article>
         </article>
     </aside>
   )

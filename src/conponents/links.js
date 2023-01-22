@@ -22,7 +22,7 @@ const links = [
     {
       id: 3,
       title: "Portfolio",
-      path: 'portfolio',
+      path: 'projects',
       img: portfolio,
     },
     {

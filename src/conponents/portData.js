@@ -15,8 +15,8 @@ const projects = [
         role: 'Front-End',
         live: '',
         web: '',
-        github: 'https://github.com/SharafaCode/vite-clone',
-        webgit: 'www.github.com/SharafaCode/vite-clone',
+        // github: 'https://github.com/SharafaCode/vite-clone',
+        // webgit: 'www.github.com/SharafaCode/vite-clone',
         
     },
     {
@@ -28,8 +28,8 @@ const projects = [
         role: 'Front-End',
         live: 'https://aiirolafin.netlify.app/',
         web: 'www.aiirolafin.netlify.app',
-        github: 'https://github.com/SharafaCode/RealEstate',
-        webgit: 'www.github.com/SharafaCode/RealEstate',
+        // github: 'https://github.com/SharafaCode/RealEstate',
+        // webgit: 'www.github.com/SharafaCode/RealEstate',
     },
     {
         id: 3,
@@ -40,8 +40,8 @@ const projects = [
         role: 'Front-End',
         live: 'https://color-paletterxzy.netlify.app/',
         web: 'www.color-paletterxzy.netlify.app',
-        github: 'https://github.com/SharafaCode/Color-Palette',
-        webgit: 'www.github.com/SharafaCode/Color-Palette',
+        // github: 'https://github.com/SharafaCode/Color-Palette',
+        // webgit: 'www.github.com/SharafaCode/Color-Palette',
         
     },
     {
@@ -53,8 +53,8 @@ const projects = [
         role: 'Front-End',
         live: 'https://genzbank.netlify.app/',
         web: 'www.genzbank.netlify.app',
-        github: 'https://github.com/SharafaCode/GenZBank',
-        webgit: 'www.github.com/SharafaCode/GenZBank',
+        // github: 'https://github.com/SharafaCode/GenZBank',
+        // webgit: 'www.github.com/SharafaCode/GenZBank',
     },
     {
         id: 5,
@@ -65,8 +65,8 @@ const projects = [
         role: 'Front-End',
         live: 'https://thebake.netlify.app/',
         web: 'www.thebake.netlify.app',
-        github: 'https://github.com/SharafaCode/TheBakery',
-        webgit: 'www.github.com/SharafaCode/TheBakery',
+        // github: 'https://github.com/SharafaCode/TheBakery',
+        // webgit: 'www.github.com/SharafaCode/TheBakery',
     },
     {
         id: 6,
@@ -77,8 +77,8 @@ const projects = [
         role: 'Front-End',
         live: 'https://vintagex.netlify.app/',
         web: 'www.vintagex.netlify.app',
-        github: 'https://github.com/SharafaCode/Vintage',
-        webgit: 'www.github.com/SharafaCode/Vintage',
+        // github: 'https://github.com/SharafaCode/Vintage',
+        // webgit: 'www.github.com/SharafaCode/Vintage',
     },
     {
         id: 7,
@@ -89,8 +89,8 @@ const projects = [
         role: 'Front-End',
         live: 'https://vintagex.netlify.app/',
         web: 'www.vintagex.netlify.app',
-        github: 'https://github.com/SharafaCode/Vintage',
-        webgit: 'www.github.com/SharafaCode/Vintage',
+        // github: 'https://github.com/SharafaCode/Vintage',
+        // webgit: 'www.github.com/SharafaCode/Vintage',
     },
     {
         id: 8,
@@ -101,8 +101,8 @@ const projects = [
         role: 'Front-End',
         live: 'https://vintagex.netlify.app/',
         web: 'www.vintagex.netlify.app',
-        github: 'https://github.com/SharafaCode/Vintage',
-        webgit: 'www.github.com/SharafaCode/Vintage',
+        // github: 'https://github.com/SharafaCode/Vintage',
+        // webgit: 'www.github.com/SharafaCode/Vintage',
     },
     {
         id: 9,
@@ -113,8 +113,8 @@ const projects = [
         role: 'Front-End',
         live: 'https://vintagex.netlify.app/',
         web: 'www.vintagex.netlify.app',
-        github: 'https://github.com/SharafaCode/Vintage',
-        webgit: 'www.github.com/SharafaCode/Vintage',
+        // github: 'https://github.com/SharafaCode/Vintage',
+        // webgit: 'www.github.com/SharafaCode/Vintage',
     },
 ];
 

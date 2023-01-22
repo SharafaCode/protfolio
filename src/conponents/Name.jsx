@@ -1,10 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Name = () => {
+
+
   return (
+
+
 <section className='w-full min-h-screen overflow-hidden'>
-    <article className='w-90 m-auto flex flex-col items-left justify-center h-screen '>      
-      <div className='flex flex-col items-left justify-center gap-5'>
+
+    <article className='w-90 m-auto flex flex-col items-left justify-center h-screen gap-10 xs:gap-24'>    
+
+      <div className='flex flex-col items-left justify-center gap-5 pt-24 xs:pt-0'>
+
         <div  className='translate-y-3 xs:-translate-y-3'>
           <div className='border-b-2 w-32 border-gray-500'></div>
         </div>
@@ -60,7 +68,19 @@ const Name = () => {
                 </p>
            </div>
 
-        </div>
+       </div>
+        
+ 
+          <div className=' btn'>
+            <Link to='contact'>
+              <button className='buttn text-base'>Contact me!</button>
+
+            </Link>
+
+          </div>
+          
+
+     
      
 
     </article>
