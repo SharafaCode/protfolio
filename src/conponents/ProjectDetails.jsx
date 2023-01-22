@@ -63,7 +63,7 @@ const ProjectDetails = () => {
                       </span>
                       Live Site - 
                       <span className=' text-xs font-font_semiMedium tracking-widest text-red-500'> 
-                        <a href={live}>
+                        <a href={live} target='_blank'>
                         {web}
                         </a>
                       </span>

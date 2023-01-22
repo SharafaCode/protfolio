@@ -15,6 +15,13 @@
 
 }
 
+.bashcodify{
+background: linear-gradient(to right, #f00000, #f86200, #f79700, #efc600, #dff200);
+  background-clip: text;
+  color: transparent;
+  font-size: 1.8rem;
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -116,11 +123,152 @@ BUTTON STYLING DESIGN
     width: 100%;
 }
 
+
+
 /*********** 
 
 BUTTON STYLING DESIGN 
 
 **********/
+
+  /*********** 
+
+ MOBILE SCREEN NAVLINKS TRANSITION STYLING DESIGN 
+
+**********/
+
+#mobilelinkstransition{
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  padding: .4rem;
+  cursor: pointer;
+  padding: .7rem;
+
+}
+
+#mobilelinkstransition::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all .5s ease-in-out;
+  border-radius: .4rem;
+  z-index: -100;
+  
+  
+}
+
+#mobilelinkstransition:hover:after{
+  background: rgba(129, 129, 129, 0.671);
+  backdrop-filter: blur(1px);
+  transition: all .5s ease-in-out;
+
+}
+
+  /*********** 
+
+ MOBILE SCREEN NAVLINKS TRANSITION STYLING DESIGN 
+
+**********/
+
+  /*********** 
+
+ACTIVE LARGE SCREEN NAVLINKS TRANSITION STYLING DESIGN 
+
+**********/
+
+  #large-navlink-active{
+    position: relative;
+    background: transparent;
+    padding: .6rem 1.4rem .6rem 1.4rem;
+    cursor: pointer;
+
+  }
+  
+  #large-navlink-active::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all .6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    border-radius: .4rem;
+    z-index: -100;
+    
+  }
+  
+  #large-navlink-active:hover:after{
+    background: rgba(129, 129, 129, 0.747);
+    padding: .6rem 2rem .6rem 2rem;
+    backdrop-filter: blur(1px);
+    transition: all .6s ease-in-out;
+
+  }
+
+  /*********** 
+
+ACTIVE LARGE SCREEN NAVLINKS TRANSITION STYLING DESIGN 
+
+**********/
+
+
+
+  /*********** 
+
+LARGE SCREEN NAVLINKS TRANSITION STYLING DESIGN 
+
+**********/
+
+  #large-navlink-transition{
+    position: relative;
+    background: transparent;
+    padding: .6rem 1.4rem .6rem 1.4rem;
+    cursor: pointer;
+
+  }
+  
+  #large-navlink-transition::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all .6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    border-radius: .4rem;
+    z-index: -100;
+    
+  }
+  
+  #large-navlink-transition:hover:after{
+    background: rgba(129, 129, 129, 0.747);
+    padding: .6rem 2rem .6rem 2rem;
+    backdrop-filter: blur(1px);
+    transition: all .6s ease-in-out;
+
+  }
+
+
+  /*********** 
+
+LARGE SCREEN NAVLINKS TRANSITION STYLING DESIGN 
+
+**********/
+
+
+  /*********** 
+
+
 
 
 
@@ -180,3 +328,32 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 /*********** PROJECT SECTION GRID CODE AND MEDIA QUERY **********/
 
+
+/************
+
+PRE LOADER ANIMATION STYLING DESIGN 
+
+**********/
+.loader{
+  /* width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-top: white solid 8px; */
+  animation: loader 5s linear infinite;
+}
+
+
+@keyframes loader {
+
+  100%{
+    transform: rotate(360deg);
+  }
+  
+}
+
+
+/*********** 
+
+PRE LOADER ANIMATION STYLING DESIGN 
+
+**********/

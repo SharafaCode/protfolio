@@ -5,9 +5,9 @@ const About = () => {
 
     <section className=' w-full min-h-screen' id='about'>
 
-        <article className=' w-90 m-auto flex flex-col items-left justify-center h-90 gap-10 mt-52 xs:mt-20'>
+        <article className=' w-90 m-auto flex flex-col items-left justify-center h-screen gap-10 mt-52 xs:mt-0'>
 
-            <div className=' flex flex-col items-left justify-center gap-10'>
+            <div className=' flex flex-col items-left justify-center gap-10 xs:pt-28'>
                 <div>
                     <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide'>
                         <span>M</span>

@@ -1,12 +1,19 @@
+import home from '../assets/home.png';
 import user from '../assets/user.png';
 import letter from '../assets/letter.png';
 import skills from '../assets/skills.png';
 import portfolio from '..//assets/briefcase.png';
 import workout from '../assets/dumbbells.png'
 import books from '../assets/openbook.png'
-
+import blog from '../assets/blogging.png';
 
 const links = [
+     {
+      id: 0,
+      title: "Home",
+      path: '/',
+      img: home,
+    },
     {
       id: 1,
       title: "About",
@@ -31,18 +38,24 @@ const links = [
       path: 'contact',
       img: letter,
     },
-    {
-      id: 5,
-      title: "WorkOut",
-      path: 'workout',
-      img: workout,
-    },
+    // {
+    //   id: 5,
+    //   title: "WorkOut",
+    //   path: 'workout',
+    //   img: workout,
+    // },
     {
       id: 6,
       title: "Books",
       path: 'books',
       img: books,
     },
+    {
+      id: 7,
+      title: "blog",
+      path: 'blog',
+      img: blog,
+    }
   ];
 
   export default links

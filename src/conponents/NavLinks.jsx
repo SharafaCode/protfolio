@@ -8,10 +8,10 @@ const NavLinks = () => {
     const {themes} = useGlobalContext()
   return (
 
-    <aside className={` ${themes? 'bg-primary text-text_color' : ' bg-white text-primary'} hidden lg:block lg:overflow-hidden lg:fixed lg:top-0 lg:left-0 lg:bottom-0 lg:z-50 lg:pl-20`}>
+    <aside className={` ${themes? 'bg-primary text-text_color' : ' bg-white text-primary'} hidden lg:block lg:overflow-hidden lg:fixed lg:top-0 lg:left-0 lg:bottom-0 lg:z-50 `}>
         <article>
 
-            <div className='h-05'>
+            <div className='h-05 lg:pl-20'>
                 <Link to='/'>
                     <div className='flex flex-col items-left justify-center gap-2  pt-9 '>
                         <img src={Profile} alt="profile" className='w-16 h-16 rounded-2xl object-cover'  />
@@ -32,13 +32,13 @@ const NavLinks = () => {
                 </p>
             </div>
 
-            <article className=' flex flex-col gap-10 pt-72'>
-                <div className=' flex flex-col items-left justify-center gap-10 text-sbase tracking-widest font-font_medium text-gray_color font-Abril '>
+            <article className=' flex flex-col gap-10 pt-60 lg:pl-12'>
+                <div className=' flex flex-col items-left justify-center gap-7 text-sbase tracking-widest font-font_medium font-Abril '>
                     {
                         links.map((item, index)=>{
                             return(
                                 <div key={index}>
-                                    <ul key={item.id}  className=' flex items-center justify-left overflow-y-hidden'>
+                                    <ul key={item.id}  className=' flex items-center justify-left overflow-y-hidden' id='large-navlink-transition'>
                                         <li className= 'cursor-pointer' >
                                             <Link to={item.path} className='flex items-center justify-center gap-8'>
                                             <div>
@@ -56,10 +56,11 @@ const NavLinks = () => {
                         })
                     }
                 </div>
-                <div className=' absolute bottom-0 -translate-y-3'>
-                    <p className=' text-sm text-blue-500 select-none font-Kaushan tracking-widest'>
-                        Bash.codify...............
+                <div className=' flex items-center pt-16 pl-3'>
+                    <p className=' text-smselect-none font-Kaushan tracking-widest bashcodify font-font_black'>
+                        Bash.codify
                     </p>
+                    <span className='text-sbase'>💪</span>
                 </div>
 
             </article>

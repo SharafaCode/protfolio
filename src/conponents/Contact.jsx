@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section className=' w-full min-h-screen overflow-hidden' id='contact'>
         <article className=' w-90 m-auto flex flex-col items-left justify-center gap-14 pt-10'>
-            <div className='grid md:grid-cols-2 gap-20 md:pb-2'>
+            <div className='grid md:grid-cols-2 gap-20 md:pb-3'>
 
                 <div className=' flex flex-col items-left justify-center gap-10'>
                     <div className=' flex flex-col items-left justify-center gap-14'>
@@ -36,20 +36,18 @@ const Contact = () => {
 
                         <form action="" className='flex flex-col gap-4'>
                             <div className='flex flex-col items-center justify-center gap-8 ss:flex-row'>
-                                <input type="text" name='name' placeholder='Name' className='w-full h-20 rounded-xl text-xs bg-input_bg_color placeholder-text_color pl-5 '/>
-                                <input type="text" name='email' placeholder='Email' className='w-full h-20 rounded-xl text-xs bg-input_bg_color placeholder-text_color pl-5 '/>
+                                <input type="text" name='name' placeholder='Name' className='w-full h-20 rounded-xl text-xs border border-gray-500 bg-transparent pl-5 tracking-widest font-font_medium'/>
+                                <input type="text" name='email' placeholder='Email' className='w-full h-20 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium'/>
                             </div>
                             <div>
-                                <input type="text" name='subject' placeholder='Subject' className='w-full h-20 rounded-xl text-xs bg-input_bg_color placeholder-text_color pl-5 '/>
+                                <input type="text" name='subject' placeholder='Subject' className='w-full h-20 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium'/>
                             </div>
                             <div>
-                            <textarea name="message" placeholder='Message'  className='w-full h-56 rounded-xl text-sm bg-input_bg_color placeholder-text_color pl-5 '></textarea>
+                            <textarea name="message" placeholder='Message'  className='w-full h-56 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium '></textarea>
                             </div>
-                            <div >
-                                <button type='submit' className=' w-fit h-fit p-20 pt-4 pb-4 bg-input_bg_color rounded-xl text-xs'>
-                                    Submit!
+                            <div className=' btn'>
+                                <button className='  rounded-xl buttn text-sbase'>Contact me!</button>
 
-                                </button>
                             </div>
                         </form>
                     </div>

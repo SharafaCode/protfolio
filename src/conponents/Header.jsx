@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import menu from '../assets/menu.png';
 import Profile from '../assets/profile.jpg';
@@ -18,9 +19,12 @@ const Header = () => {
     <header className= {` ${themes? 'bg-primary text-text_color' : 'bg-white text-primary'} fixed top-0 right-0 w-full h-26 lg:w-85 overflow-hidden pt-3 pb-3 z-50 border-b border-b-gray-500`} >
         <nav className='w-90 m-auto'>
             <div className=' flex items-center justify-between h-20'>
+              <Link to='/'>
               <div className=' lg:hidden'>
-                <img src={Profile} alt="profile" className='w-16 h-16 rounded-2xl object-cover xs:w-20 xs:h-20' />
+                <img src={Profile} alt="profile" className='w-16 h-16 rounded-2xl object-cover xs:w-20 xs:h-20' onClick={()=> setMenuToggle(false)}/>
               </div>
+
+              </Link>
 
               <div>
                 <h1 className='text-base'>
@@ -50,7 +54,7 @@ const Header = () => {
               </div>
 
               <div className=' lg:hidden cursor-pointer' onClick={()=> setMenuToggle((prev)=> !prev)}>
-              <img src={menu} alt="menu" className={`${themes? ' invert' : ' invert-0'} w-10`} />
+              <img src={menu} alt="menu" className={`${themes? ' invert' : ' invert-0'} w-10 cursor-pointer`} />
               </div>
                 
             </div>
