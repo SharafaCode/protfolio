@@ -10,17 +10,24 @@ import PreLoader from "./conponents/PreLoader";
 
 function App() {
 
-  const {themes} = useGlobalContext();
+  const {themes, IsLoading, setIsLoading} = useGlobalContext();
+
+  // useEffect(()=>{
+  //   setIsLoading(true);
+  //   setTimeout(()=>{
+  //     setIsLoading(false);
+  //   },5000)
+  // }, [])
 
 
 return (
+
+  
+
   <div className={themes? 'darkTheme' : 'lightTheme'}>
 
-    <Home/>
-
-   
-
-    
+      <Home />
+      
   </div>
 )
 

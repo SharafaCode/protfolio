@@ -55,7 +55,7 @@ const Contact = () => {
                 </div>
 
                 <div className='block md:-translate-y-6 -z-20 '>
-                    <iframe className='w-full h-80 md:h-full rounded-3xl shadow-2xl'  id="gmap_canvas" src="https://maps.google.com/maps?q=17,%20Basheer%20Augusto%20street,%20Surulere&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <iframe className='w-full h-80 md:h-full rounded-3xl box-shadow'  id="gmap_canvas" src="https://maps.google.com/maps?q=17,%20Basheer%20Augusto%20street,%20Surulere&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 
 
                 </div>
