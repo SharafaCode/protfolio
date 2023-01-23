@@ -9,17 +9,20 @@ const About = () => {
 
             <div className=' flex flex-col items-left justify-center gap-10 xs:pt-28'>
                 <div>
-                    <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide'>
+                    <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide ss:tracking-widest'>
                         <span>M</span>
                         <span>e</span>
                         <span>,</span>
+                        {' '}
                         <span> M</span>
                         <span>y</span>
                         <span>s</span>
                         <span>e</span>
                         <span>l</span>
                         <span>f</span>
+                        {' '}
                         <span> &</span>
+                        {' '}
                         <span> I</span>
 
                     </h1>

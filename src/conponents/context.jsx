@@ -13,8 +13,22 @@ export const AppProvider = ({children})=> {
    
 
     const [themes, setThemes] = useState(getTheme);
-    const [menutoggle, setMenuToggle] = useState(false)
-    const [isLoading, setIsLoading] = useState(true)
+    const [menutoggle, setMenuToggle] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+
+    
+
+    const menuBtn = ()=>{
+        if(setMenuToggle){
+            slider.classList.add('slideOut')
+
+        }
+
+        else{
+            slider.classList.remove('slideIn')
+        }
+
+    }
 
 
     useEffect(()=>{
@@ -23,7 +37,7 @@ export const AppProvider = ({children})=> {
     },[themes])
     return(
         <AppContext.Provider value={{
-             themes, setThemes, menutoggle, setMenuToggle, isLoading, setIsLoading
+             themes, setThemes, menutoggle, setMenuToggle, isLoading, setIsLoading, menuBtn
         }}>
             {
                 children

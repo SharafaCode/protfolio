@@ -9,7 +9,7 @@ const Contact = () => {
 
                 <div className=' flex flex-col items-left justify-center gap-10'>
                     <div className=' flex flex-col items-left justify-center gap-14'>
-                        <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide'>
+                        <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide ss:tracking-wider'>
                             <span>C</span>
                             <span>o</span>
                             <span>n</span>
@@ -17,6 +17,7 @@ const Contact = () => {
                             <span>a</span>
                             <span>c</span>
                             <span>t</span>
+                            {' '}
                             <span> M</span>
                             <span>e</span>
                         </h1>

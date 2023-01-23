@@ -60,13 +60,12 @@ const Header = () => {
             </div>
         </nav>
 
-        {
-          menutoggle &&
+       
           <div >
             <CTA/>
           </div>
 
-        }
+        
 
 
     </header>

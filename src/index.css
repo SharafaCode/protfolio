@@ -137,7 +137,7 @@ BUTTON STYLING DESIGN
 
 **********/
 
-#mobilelinkstransition{
+#mobile-links-transition{
   position: relative;
   width: fit-content;
   height: fit-content;
@@ -147,7 +147,7 @@ BUTTON STYLING DESIGN
 
 }
 
-#mobilelinkstransition::after{
+#mobile-links-transition::after{
   content: '';
   width: 100%;
   height: 100%;
@@ -163,7 +163,7 @@ BUTTON STYLING DESIGN
   
 }
 
-#mobilelinkstransition:hover:after{
+#mobile-links-transition:hover:after{
   background: rgba(129, 129, 129, 0.671);
   backdrop-filter: blur(1px);
   transition: all .5s ease-in-out;
@@ -366,3 +366,96 @@ PRE LOADER ANIMATION STYLING DESIGN
 PRE LOADER ANIMATION STYLING DESIGN 
 
 **********/
+
+
+
+/*********** 
+
+RUBBERBAND ANIMATION STYLING DESIGN 
+
+**********/
+
+span {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  display: inline-block;
+}
+
+span:hover {
+
+  animation-name: rubberBand;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+} 
+
+
+/*********** 
+
+RUBBERBAND ANIMATION STYLING DESIGN 
+
+**********/
+
+.slideIn{
+  animation: slideIn .6s linear forwards;
+
+}
+
+.slideOut{
+animation: slideOut .6s linear forwards;
+}
+
+.transitions{
+   transition: all .5s linear;
+}
+
+@keyframes slideIn {
+  0%{
+    transform: translateX(100%);
+      transition: all .5s linear;
+  }
+  100%{
+    transform: translateX(0%);
+      transition: all .5s linear;
+  }
+  
+}
+@keyframes slideOut {
+  0%{
+    transform: translateX(0%);
+      transition: all .5s linear;
+  }
+  100%{
+    transform: translateX(100%);
+      transition: all .5s linear;
+  }
+  
+}

@@ -1,27 +1,29 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
-// import user from '../assets/user.png';
-// import letter from '../assets/letter.png';
-// import home from '../assets/home.png';
-// import skills from '../assets/skills.png';
-// import portfolio from '..//assets/briefcase.png';
 import { useGlobalContext } from './context';
 import links from './links';
+import 'animate.css';
 
 
 const CTA = () => {
 
-    const {themes, setThemes, setMenuToggle} = useGlobalContext();
+    const {themes, setThemes, menutoggle, setMenuToggle, menuBtn} = useGlobalContext();
 
+    // const slider = document.getElementById('#slide')
+
+    // console.log(slider);
 
   return (
     
     <div className='  lg:w-85 lg:hidden z-50'>
+        {
+            menutoggle &&
+        
 
             <div className= ' w-screen h-90 fixed right-0 left-0 bottom-0 bg-lightgray_color' >
 
-                <div className={` ${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} w-36 h-90 flex flex-col items-center justify-center pt-14 gap-3  rounded-tl-3xl rounded-bl-3xl text-xs tracking-wide fixed right-0  `}  >
+                <div className={` ${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} duration-500 w-32 h-90 flex flex-col items-center justify-center pt-28 gap-5  rounded-tl-3xl rounded-bl-3xl text-xs tracking-wide fixed right-0 ${menutoggle? ' slideIn' : 'null'}`} id='slide' onClick={()=> setMenuToggle((prev)=> !prev)} >
                     {
                         links.map((item, index) => {
                             
@@ -29,15 +31,15 @@ const CTA = () => {
                             return (
                                 <React.Fragment key={index}>
                                     <div>
-                                    <ul id='large-navlink-transition'>
+                                    <ul id='mobile-links-transition' onClick={()=> setMenuToggle(false)}>
                                         <li className= ' cursor-pointer' >
                                             <Link to={item.path} className=' flex flex-col items-center justify-center'>
                                                 <div>
-                                                <img src={item.img} alt={item.title} className= {`${themes? 'invert-0' : ' invert'} w-9`} />
+                                                <img src={item.img} alt={item.title} className= {`${themes? 'invert-0' : ' invert'} w-12`} />
                                                 </div>
-                                                <div>
+                                                {/* <div>
                                                     {item.title}
-                                                </div>
+                                                </div> */}
                                             </Link>
                                         </li>
                                     </ul>
@@ -47,7 +49,7 @@ const CTA = () => {
                         })
                     }
 
-                    <div className=' pt-14'>
+                    <div className=' pt-28'>
                         <button className= {`${themes? ' bg-gray-500' : 'bg-secondary'} border-2 w-20 h-109 rounded-full text-base flex items-center`} onClick={()=>{
                         setThemes((prev)=>!prev)
                         }}>
@@ -74,7 +76,7 @@ const CTA = () => {
 
             </div>
 
-
+}
 
     </div>
   )

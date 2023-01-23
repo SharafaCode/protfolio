@@ -11,13 +11,14 @@ const Skills = () => {
         <article className='w-90 m-auto flex flex-col pt-10  md:flex-row'>
             <div className=' flex flex-col gap-10 item-left justify-center lg:-translate-y-10 xl:lg:translate-y-8'>
                 <div>
-                    <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide ss:text-5xl'>
+                    <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide ss:text-5xl ss:tracking-widest'>
                         <span>S</span>
                         <span>k</span>
                         <span>i</span>
                         <span>l</span>
                         <span>l</span>
                         <span>s</span>
+                        {' '}
                         <span> &</span>
                         <br />
                         <span> E</span>
