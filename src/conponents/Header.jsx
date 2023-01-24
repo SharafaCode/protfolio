@@ -32,30 +32,10 @@ const Header = () => {
               <div className=' flex flex-col items-center justify-center text-base font-Kaushan tracking-widest'>
                 {
                   linksindex? linkdata[linksindex].title :
-                  <div className=' languages'>
-
+                  <div>
                     <h1 >
                     Welcome🤗
                     </h1>
-                    <h1>
-                    Bienvenue🤗
-                    </h1>
-                    <h1>
-                    добро пожаловать🤗
-                    </h1>
-                    <h1>
-                    欢迎🤗
-                    </h1>
-                    <h1>
-                    Benvenuta🤗
-                    </h1>
-                    <h1>
-                   أهلا بك🤗
-                    </h1>
-                    <h1>
-                   환영하다🤗
-                    </h1>
-
                   </div>
                 }
                 <TimeDate/>
