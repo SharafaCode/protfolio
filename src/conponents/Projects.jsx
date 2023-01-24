@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import projects from './portData';
 import { useGlobalContext } from './context';
+import { motion } from 'framer-motion';
 
 const Portfolio = () => {
 
@@ -9,7 +10,12 @@ const Portfolio = () => {
 
 
   return (
-    <section className='w-full min-h-screen pt-10 pb-9' id='projects'>
+    <motion.section
+    initial= {{scaleY: 0, opacity: 0}}
+    animate={{scaleY: 1, opacity: 1}}
+    exit={{scaleY: 0, opacity: 0}}
+    transition={{duration:0.5}}
+    className='w-full min-h-screen pt-10 pb-9' id='projects'>
       <article className='  w-90 m-auto '>
         <div className=''>
           <div className=' custom-grid'>
@@ -19,7 +25,7 @@ const Portfolio = () => {
 
                 return (
                   <React.Fragment key={id}>
-                  <div className=' relative hover:scale-105  transition-all duration-500 ease-linear hover:transition-all hover:duration-500 hover:ease-linear   span-cols'>
+                  <div className=' relative hover:scale-105  transition-all duration-500 ease-linear hover:transition-all hover:duration-500 hover:ease-linear span-cols'>
                   
                       <img src={img} alt={title} className='   w-full h-full object-cover box-shadow ' />
 
@@ -47,7 +53,7 @@ const Portfolio = () => {
           
         </div>
       </article>
-    </section>
+    </motion.section>
   )
 }
 

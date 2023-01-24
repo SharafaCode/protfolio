@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import projects from './portData';
 import { Icon } from '@iconify/react';
 import close from '../assets/close.png';
+import { motion } from 'framer-motion';
 
 
 
@@ -19,7 +20,12 @@ const ProjectDetails = () => {
     
   return (
 
-    <section className=' flex items-center justify-center w-full min-h-screen bg-project_dark_color absolute top-0 left-0 bottom-0 right-0 z-50 backdrop-blur-sm pl-5 pr-5'>
+    <motion.section 
+    initial= {{scaleY: 0, opacity: 0}}
+    animate={{scaleY: 1, opacity: 1}}
+    exit={{scaleY: 0, opacity: 0}}
+    transition={{duration:0.5}}
+    className=' flex items-center justify-center w-full min-h-screen bg-project_dark_color absolute top-0 left-0 bottom-0 right-0 z-50 backdrop-blur-sm pl-5 pr-5'>
 
         <article className=' relative flex items-left justify-center flex-col gap-10 bg-gray-300 p-5 rounded-3xl ss-w-screen ss:h-fit md:mt-16'>
 
@@ -79,7 +85,7 @@ const ProjectDetails = () => {
            
 
         </article>
-    </section>
+    </motion.section>
   )
 }
 

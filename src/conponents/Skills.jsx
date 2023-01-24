@@ -1,13 +1,20 @@
 import React from 'react';
 import TextShpere from './TextShpere/TextShpere';
 import { useGlobalContext } from './context';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Skills = () => {
     const {themes} = useGlobalContext();
 
 
   return (
-    <section className=' w-full min-h-screen  z-50' id='skills'>
+    <motion.section 
+    initial= {{scaleY: 0, opacity: 0}}
+    animate={{scaleY: 1, opacity: 1}}
+    exit={{scaleY: 0, opacity: 0}}
+    transition={{duration:0.5}}
+    className=' w-full min-h-screen  z-50' id='skills'>
         <article className='w-90 m-auto flex flex-col pt-10  md:flex-row'>
             <div className=' flex flex-col gap-10 item-left justify-center lg:-translate-y-10 xl:lg:translate-y-8'>
                 <div>
@@ -47,7 +54,7 @@ const Skills = () => {
 
                     </p>
                     <p>
-                        Visit my <a href="" className= {` ${themes? 'text-text_color' : 'text-primary'}  cursor-pointer font-font_semiMedium`} >LinkedIn</a> profile for more details or just <a href="" className= {` ${themes? 'text-text_color' : 'text-primary'}  cursor-pointer font-font_semiMedium`} >Contact</a> me.
+                        Visit my <a href="https://www.linkedin.com/in/sharafa-bashiru-36021b23a/"  target='_blank' className= {` ${themes? 'text-text_color' : 'text-primary'}  cursor-pointer font-font_semiMedium`} >LinkedIn</a> profile for more details or just <Link to='/contact' className= {` ${themes? 'text-text_color' : 'text-primary'}  cursor-pointer font-font_semiMedium`} >Contact</Link> me.
                     </p>
                 </div>
             </div>
@@ -58,7 +65,7 @@ const Skills = () => {
 
 
         </article>
-    </section>
+    </motion.section>
   )
 }
 

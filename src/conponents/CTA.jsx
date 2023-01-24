@@ -1,18 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Icon } from '@iconify/react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useGlobalContext } from './context';
-import links from './links';
+
 import 'animate.css';
 
 
 const CTA = () => {
 
-    const {themes, setThemes, menutoggle, setMenuToggle, menuBtn} = useGlobalContext();
+    const {themes, setThemes, menutoggle, setMenuToggle, linkdata, linksindex, linksButton} = useGlobalContext();
 
-    // const slider = document.getElementById('#slide')
 
-    // console.log(slider);
+    
 
   return (
     
@@ -21,26 +20,26 @@ const CTA = () => {
             menutoggle &&
         
 
-            <div className= ' w-screen h-90 fixed right-0 left-0 bottom-0 bg-lightgray_color' >
+            <div className= ' w-screen h-90 fixed right-0 left-0 bottom-0 bg-lightgray_color'>
 
-                <div className={` ${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} duration-500 w-32 h-90 flex flex-col items-center justify-center pt-28 gap-5  rounded-tl-3xl rounded-bl-3xl text-xs tracking-wide fixed right-0 ${menutoggle? ' slideIn' : 'null'}`} id='slide' onClick={()=> setMenuToggle((prev)=> !prev)} >
+                <div className={` ${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} duration-500 w-40 h-90 flex flex-col items-center justify-center pt-28 gap-5  rounded-tl-3xl rounded-bl-3xl text-xs tracking-wide fixed right-0 ${menutoggle? ' slideIn' : 'null'} pr-6`}>
                     {
-                        links.map((item, index) => {
+                        linkdata.map((item, index) => {
                             
 
                             return (
                                 <React.Fragment key={index}>
-                                    <div>
+                                    <div id='animateParent'>
                                     <ul id='mobile-links-transition' onClick={()=> setMenuToggle(false)}>
                                         <li className= ' cursor-pointer' >
-                                            <Link to={item.path} className=' flex flex-col items-center justify-center'>
+                                            <NavLink to={item.path} className=' flex flex-col items-center justify-center' onClick={()=> linksButton(index)}>
                                                 <div>
                                                 <img src={item.img} alt={item.title} className= {`${themes? 'invert-0' : ' invert'} w-12`} />
                                                 </div>
                                                 {/* <div>
                                                     {item.title}
                                                 </div> */}
-                                            </Link>
+                                            </NavLink>
                                         </li>
                                     </ul>
                                 </div>

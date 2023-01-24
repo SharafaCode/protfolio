@@ -46,7 +46,7 @@ module.exports = {
   
           "3xl":["clamp(4.8rem, 10vw, 6rem)"],
   
-          "4xl":["clamp(5rem, 10vw, 7rem)"],
+          "4xl":["clamp(5rem, 10vw, 7.5rem)"],
 
           "5xl":["clamp(6rem, 10vw, 8rem)"],
           
@@ -84,7 +84,7 @@ module.exports = {
         '85': "85vh",
         // '40': "40vh",
         // '45': "47rem",
-        // '48': "48rem",
+        '48': "48rem",
         // '70': "70vh",
         // '75': "75vh",
     

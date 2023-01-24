@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-const url = 'http://127.0.0.1:5173/portData/'
-console.log(url);
+import links from './links';
 
 const getTheme = ()=> {
     return JSON.parse(localStorage.getItem('theme')) || true;
@@ -13,22 +12,26 @@ export const AppProvider = ({children})=> {
    
 
     const [themes, setThemes] = useState(getTheme);
+    const [linkdata, setLinkData] = useState(links)
     const [menutoggle, setMenuToggle] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
+    const [linksindex, setLinksIndex] = useState(null);
 
-    
 
-    const menuBtn = ()=>{
-        if(setMenuToggle){
-            slider.classList.add('slideOut')
+    const linksButton = (index) =>{
 
+        if(index === linksindex){
+
+            return setLinksIndex(null);
         }
 
-        else{
-            slider.classList.remove('slideIn')
-        }
-
+        setLinksIndex(index);
     }
+
+    useEffect(()=>{
+        linksButton
+},[])
+
 
 
     useEffect(()=>{
@@ -37,7 +40,7 @@ export const AppProvider = ({children})=> {
     },[themes])
     return(
         <AppContext.Provider value={{
-             themes, setThemes, menutoggle, setMenuToggle, isLoading, setIsLoading, menuBtn
+             themes, setThemes, menutoggle, setMenuToggle, isLoading, setIsLoading, linkdata, linksButton, linksindex
         }}>
             {
                 children

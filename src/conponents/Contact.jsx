@@ -1,15 +1,22 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
+
 
 
 const Contact = () => {
   return (
-    <section className=' w-full min-h-screen overflow-hidden' id='contact'>
+    <motion.section 
+    initial= {{scaleY: 0, opacity: 0}}
+    animate={{scaleY: 1, opacity: 1}}
+    exit={{scaleY: 0, opacity: 0}}
+    transition={{duration:0.5}}
+    className=' w-full min-h-screen overflow-hidden' id='contact'>
         <article className=' w-90 m-auto flex flex-col items-left justify-center gap-14 pt-10'>
             <div className='grid md:grid-cols-2 gap-20 md:pb-3'>
 
                 <div className=' flex flex-col items-left justify-center gap-10'>
                     <div className=' flex flex-col items-left justify-center gap-14'>
-                        <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide ss:tracking-wider'>
+                        <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide ss:tracking-wider ss:text-5xl md:text-4xl '>
                             <span>C</span>
                             <span>o</span>
                             <span>n</span>
@@ -35,19 +42,19 @@ const Contact = () => {
 
                     <div>
 
-                        <form action="" className='flex flex-col gap-4'>
+                        <form action="https://formspree.io/f/xvongjpa" method='POST' className='flex flex-col gap-4'>
                             <div className='flex flex-col items-center justify-center gap-8 ss:flex-row'>
-                                <input type="text" name='name' placeholder='Name' className='w-full h-20 rounded-xl text-xs border border-gray-500 bg-transparent pl-5 tracking-widest font-font_medium'/>
-                                <input type="text" name='email' placeholder='Email' className='w-full h-20 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium'/>
+                                <input type="name" name='name' id='name' placeholder='Name' className='w-full h-20 rounded-xl text-xs border border-gray-500 bg-transparent pl-5 tracking-widest font-font_medium'/>
+                                <input type="email" name='email' id='email' placeholder='Email' className='w-full h-20 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium'/>
                             </div>
                             <div>
-                                <input type="text" name='subject' placeholder='Subject' className='w-full h-20 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium'/>
+                                <input type="sunject" name='subject' id='subject' placeholder='Subject' className='w-full h-20 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium'/>
                             </div>
                             <div>
-                            <textarea name="message" placeholder='Message'  className='w-full h-56 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium '></textarea>
+                            <textarea name="message" id='message' placeholder='Message'  className='w-full h-56 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium '></textarea>
                             </div>
                             <div className=' btn'>
-                                <button className='  rounded-xl buttn text-sbase'>Contact me!</button>
+                                <button type='submit' className='  rounded-xl buttn text-sbase'>Contact me!</button>
 
                             </div>
                         </form>
@@ -65,7 +72,7 @@ const Contact = () => {
 
 
         </article>
-    </section>
+    </motion.section>
   )
 }
 

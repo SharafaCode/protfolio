@@ -1,14 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const Books = () => {
+const Blogs = () => {
   return (
     <motion.section 
     initial= {{scaleY: 0, opacity: 0}}
-animate={{scaleY: 1, opacity: 1}}
-exit={{scaleY: 0, opacity: 0}}
-transition={{duration:0.5}}
-    className=' w-full min-h-screen flex items-center justify-center ' id='books'>
+    animate={{scaleY: 1, opacity: 1}}
+    exit={{scaleY: 0, opacity: 0}}
+    transition={{duration:0.5}}
+    className=' w-full min-h-screen flex items-center justify-center ' id='blogs'>
         <article>
             <div>
                 <div>
@@ -24,4 +24,4 @@ transition={{duration:0.5}}
   )
 }
 
-export default Books
+export default Blogs

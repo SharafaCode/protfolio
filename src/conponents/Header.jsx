@@ -5,11 +5,13 @@ import menu from '../assets/menu.png';
 import Profile from '../assets/profile.jpg';
 import { useGlobalContext } from './context';
 import CTA from './CTA';
+import TimeDate from './TimeDate';
+
 
 const Header = () => {
 
 
-  const {themes, setThemes, menutoggle, setMenuToggle} = useGlobalContext();
+  const {themes, setThemes, menutoggle, setMenuToggle, linkdata, linksindex, linksButton} = useGlobalContext();
 
 
   menutoggle? document.body.style.overflowY ='hidden' : document.body.style.overflowY = 'auto';
@@ -19,17 +21,44 @@ const Header = () => {
     <header className= {` ${themes? 'bg-primary text-text_color' : 'bg-white text-primary'} fixed top-0 right-0 w-full h-26 lg:w-85 overflow-hidden pt-3 pb-3 z-50 border-b border-b-gray-500`} >
         <nav className='w-90 m-auto'>
             <div className=' flex items-center justify-between h-20'>
-              <Link to='/'>
+             
               <div className=' lg:hidden'>
-                <img src={Profile} alt="profile" className='w-16 h-16 rounded-2xl object-cover xs:w-20 xs:h-20' onClick={()=> setMenuToggle(false)}/>
+   
+                  <img src={Profile} alt="profile" className='w-16 h-16 rounded-2xl object-cover xs:w-20 xs:h-20' onClick={()=> setMenuToggle(false)}/>
+
               </div>
 
-              </Link>
 
-              <div>
-                <h1 className='text-base'>
-                  Hello
-                </h1>
+              <div className=' flex flex-col items-center justify-center text-base font-Kaushan tracking-widest'>
+                {
+                  linksindex? linkdata[linksindex].title :
+                  <div className=' languages'>
+
+                    <h1 >
+                    Welcome🤗
+                    </h1>
+                    <h1>
+                    Bienvenue🤗
+                    </h1>
+                    <h1>
+                    добро пожаловать🤗
+                    </h1>
+                    <h1>
+                    欢迎🤗
+                    </h1>
+                    <h1>
+                    Benvenuta🤗
+                    </h1>
+                    <h1>
+                   أهلا بك🤗
+                    </h1>
+                    <h1>
+                   환영하다🤗
+                    </h1>
+
+                  </div>
+                }
+                <TimeDate/>
               </div>
               
               <div className=' hidden lg:block'>
@@ -54,7 +83,9 @@ const Header = () => {
               </div>
 
               <div className=' lg:hidden cursor-pointer' onClick={()=> setMenuToggle((prev)=> !prev)}>
+                <span>
               <img src={menu} alt="menu" className={`${themes? ' invert' : ' invert-0'} w-10 cursor-pointer`} />
+                </span>
               </div>
                 
             </div>

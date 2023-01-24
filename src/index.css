@@ -28,10 +28,15 @@ background: linear-gradient(to right, #f00000, #f86200, #f79700, #efc600, #dff20
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-}
-:focus{
   outline: none;
 }
+
+
+/*********** 
+
+CUSTOM DARKMODE / LIGHT STYLE DESIGN
+
+**********/
 
 .lightTheme{
   background: #fff;
@@ -41,6 +46,12 @@ background: linear-gradient(to right, #f00000, #f86200, #f79700, #efc600, #dff20
   background: #080801;
   color: #efefef;
 }
+
+/*********** 
+
+CUSTOM DARKMODE / LIGHT STYLE DESIGN
+
+**********/
 
 html{
   font-size: 62.5%;
@@ -58,6 +69,12 @@ body{
 
 }
 
+/*********** 
+
+CUSTOM SCROLL BAR STYLE DESIGN
+
+**********/
+
 
 ::-webkit-scrollbar{
   width: .5rem;
@@ -70,14 +87,19 @@ body{
   background: rgb(128, 128, 128);
   width: .5rem;
   
- 
-
 
 }
 ::-webkit-scrollbar-thumb{
    background-image: linear-gradient(to right top, #e1e6ee, #c9efff, #73a4a7, #b5ffdd, #9ca092);
   	border-radius: 10px;
 }
+
+/*********** 
+
+CUSTOM SCROLL BAR STYLE DESIGN
+
+**********/
+
 
 .borders{
   border-right: .1rem solid gray;
@@ -122,151 +144,6 @@ BUTTON STYLING DESIGN
 .btn .buttn:hover::after{
     width: 100%;
 }
-
-
-
-/*********** 
-
-BUTTON STYLING DESIGN 
-
-**********/
-
-  /*********** 
-
- MOBILE SCREEN NAVLINKS TRANSITION STYLING DESIGN 
-
-**********/
-
-#mobile-links-transition{
-  position: relative;
-  width: fit-content;
-  height: fit-content;
-  padding: .4rem;
-  cursor: pointer;
-  padding: .7rem;
-
-}
-
-#mobile-links-transition::after{
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: all .5s ease-in-out;
-  border-radius: .4rem;
-  z-index: -100;
-  
-  
-}
-
-#mobile-links-transition:hover:after{
-  background: rgba(129, 129, 129, 0.671);
-  backdrop-filter: blur(1px);
-  transition: all .5s ease-in-out;
-
-}
-
-  /*********** 
-
- MOBILE SCREEN NAVLINKS TRANSITION STYLING DESIGN 
-
-**********/
-
-  /*********** 
-
-ACTIVE LARGE SCREEN NAVLINKS TRANSITION STYLING DESIGN 
-
-**********/
-
-  #large-navlink-active{
-    position: relative;
-    background: transparent;
-    padding: .6rem 1.4rem .6rem 1.4rem;
-    cursor: pointer;
-
-  }
-  
-  #large-navlink-active::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: all .6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-    border-radius: .4rem;
-    z-index: -100;
-    
-  }
-  
-  #large-navlink-active:hover:after{
-    background: rgba(129, 129, 129, 0.747);
-    padding: .6rem 2rem .6rem 2rem;
-    backdrop-filter: blur(1px);
-    transition: all .6s ease-in-out;
-
-  }
-
-  /*********** 
-
-ACTIVE LARGE SCREEN NAVLINKS TRANSITION STYLING DESIGN 
-
-**********/
-
-
-
-  /*********** 
-
-LARGE SCREEN NAVLINKS TRANSITION STYLING DESIGN 
-
-**********/
-
-  #large-navlink-transition{
-    position: relative;
-    background: transparent;
-    padding: .6rem 1.4rem .6rem 1.4rem;
-    cursor: pointer;
-
-  }
-  
-  #large-navlink-transition::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: all .6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-    border-radius: .4rem;
-    z-index: -100;
-    
-  }
-  
-  #large-navlink-transition:hover:after{
-    background: rgba(129, 129, 129, 0.747);
-    padding: .6rem 2rem .6rem 2rem;
-    backdrop-filter: blur(1px);
-    transition: all .6s ease-in-out;
-
-  }
-
-
-  /*********** 
-
-LARGE SCREEN NAVLINKS TRANSITION STYLING DESIGN 
-
-**********/
-
-
-  /*********** 
 
 
 
@@ -329,133 +206,5 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 /*********** PROJECT SECTION GRID CODE AND MEDIA QUERY **********/
 
 
-/************
-
-PRE LOADER ANIMATION STYLING DESIGN 
-
-**********/
-
-/* .container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-} */
-
-.loader{
-  /* width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border-top: white solid 8px; */
-  animation: loader 5s linear infinite;
-}
 
 
-@keyframes loader {
-
-  100%{
-    transform: rotate(360deg);
-  }
-  
-}
-
-
-/*********** 
-
-PRE LOADER ANIMATION STYLING DESIGN 
-
-**********/
-
-
-
-/*********** 
-
-RUBBERBAND ANIMATION STYLING DESIGN 
-
-**********/
-
-span {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-iteration-count: 1;
-  display: inline-block;
-}
-
-span:hover {
-
-  animation-name: rubberBand;
-}
-
-@keyframes rubberBand {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
-
-  30% {
-    transform: scale3d(1.25, 0.75, 1);
-  }
-
-  40% {
-    transform: scale3d(0.75, 1.25, 1);
-  }
-
-  50% {
-    transform: scale3d(1.15, 0.85, 1);
-  }
-
-  65% {
-    transform: scale3d(.95, 1.05, 1);
-  }
-
-  75% {
-    transform: scale3d(1.05, .95, 1);
-  }
-
-  to {
-    transform: scale3d(1, 1, 1);
-  }
-} 
-
-
-/*********** 
-
-RUBBERBAND ANIMATION STYLING DESIGN 
-
-**********/
-
-.slideIn{
-  animation: slideIn .6s linear forwards;
-
-}
-
-.slideOut{
-animation: slideOut .6s linear forwards;
-}
-
-.transitions{
-   transition: all .5s linear;
-}
-
-@keyframes slideIn {
-  0%{
-    transform: translateX(100%);
-      transition: all .5s linear;
-  }
-  100%{
-    transform: translateX(0%);
-      transition: all .5s linear;
-  }
-  
-}
-@keyframes slideOut {
-  0%{
-    transform: translateX(0%);
-      transition: all .5s linear;
-  }
-  100%{
-    transform: translateX(100%);
-      transition: all .5s linear;
-  }
-  
-}

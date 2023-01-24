@@ -1,20 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Link, } from 'react-router-dom';
 import { useGlobalContext } from './context';
 import linkedin from '../assets/linkedin.png';
 import github from '../assets/github.png';
 import twitter from '../assets/twitter.png';
-import 'animate.css';
+import './animation.css';
+
 
 const Name = () => {
 
   const {themes} = useGlobalContext();
+ 
+
 
 
   return (
 
 
-<section className='w-full min-h-screen overflow-hidden'>
+<motion.section 
+initial= {{scaleY: 0, opacity: 0}}
+animate={{scaleY: 1, opacity: 1}}
+exit={{scaleY: 0, opacity: 0}}
+transition={{duration:0.5}}
+
+className='w-full min-h-screen overflow-hidden'>
 
     <article className='w-90 m-auto flex flex-col items-left justify-center h-screen gap-10 xs:pt-28 ss:flex-row ss:gap-0 ss:justify-between'>    
 
@@ -24,10 +34,10 @@ const Name = () => {
           <div className='border-b-2 w-32 border-gray-500'></div>
         </div>
 
-        <div className=' text-xl font-font_medium font-Abril flex flex-col gap-2 xs:text-1xl ss:tracking-widest'>
+        <div className=' text-xl font-font_medium font-Abril flex flex-col gap-2 xs:text-1xl xsm:text-3xl ss:tracking-widest sm:text-5xl '>
  
               <h1>
-              <span >
+              <span>
                 H
               </span>
               <span >
@@ -37,6 +47,7 @@ const Name = () => {
                 ,
               </span>
             </h1>
+
             <h1>
 
               <span>
@@ -89,25 +100,26 @@ const Name = () => {
 
       </div>
 
-      <div className=' flex items-center  gap-10 ss:flex-col ss:justify-center'>
-        <a href="https://twitter.com/Bash_Codify">
-          <img src= {twitter} alt="twitter" className={`${themes? 'invert' : ' invert-0'} w-10 xs:w-16 ss:w-12 cursor-pointer`} />
+      <div className=' flex items-center  gap-10 ss:flex-col ss:justify-center' >
 
-        </a>
-        <a href="https://www.linkedin.com/in/sharafa-bashiru-36021b23a/">
-          <img src= {linkedin} alt="linkedin"  className={`${themes? 'invert' : ' invert-0'} w-10 xs:w-16 ss:w-12 cursor-pointer `}  />
-          
-        </a>
-        <a href="https://github.com/SharafaCode">
-        <img src= {github} alt="github"  className={`${themes? 'invert' : ' invert-0'} w-10 xs:w-16 ss:w-12 cursor-pointer `}  />
+            <a href="https://twitter.com/Bash_Codify" target='_blank' id='animateParent'>
+              <img src= {twitter} alt="twitter" className={`${themes? 'invert' : ' invert-0'} w-10 xs:w-16 ss:w-12 cursor-pointer`} />
+            </a>
 
-        </a>
+          <a href="https://www.linkedin.com/in/sharafa-bashiru-36021b23a/"  target='_blank' id='animateParent'>
+            <img src= {linkedin} alt="linkedin"  className={`${themes? 'invert' : ' invert-0'} w-10 xs:w-16 ss:w-12 cursor-pointer `}  />
+          </a>
+
+            <a href="https://github.com/SharafaCode" target='_blank' id='animateParent'>
+            <img src= {github} alt="github"  className={`${themes? 'invert' : ' invert-0'} w-10 xs:w-16 ss:w-12 cursor-pointer `}  />
+            </a>
+
        
   
       </div>
        
     </article>
-   </section>
+   </motion.section>
   )
 }
 
