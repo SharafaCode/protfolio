@@ -21,9 +21,9 @@ const CTA = () => {
             menutoggle &&
         
 
-            <div className= ' w-full h-screen fixed right-0 left-0 bottom-0 bg-lightgray_color'>
+            <div className= ' w-full min-h-screen fixed right-0 left-0 bottom-0 bg-lightgray_color'>
 
-                <div className={` ${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} duration-500 w-40 h-full  flex flex-col items-center justify-between rounded-tl-3xl rounded-bl-3xl text-xs tracking-wide fixed right-0 ${menutoggle? ' slideIn' : 'null'}`}>
+                <div className={` ${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} duration-500 w-40 min-h-fit  flex flex-col items-center justify-between rounded-tl-3xl rounded-bl-3xl text-xs tracking-wide fixed right-0 ${menutoggle? ' slideIn' : 'null'}`}>
 
                     <div className=' flex items-center justify-center cursor-pointer translate-y-10' onClick={()=> setMenuToggle(false)}>
                         <img src={close} alt=""  className=' w-10 invert'/>
