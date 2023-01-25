@@ -1,9 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { useGlobalContext } from './context';
 
 
 
 const Contact = () => {
+    const { statusmessage, setStatusMessage, isLoading, setIsLoading, values, setValues } = useGlobalContext();
+
+
+    const form = useRef();
+
+        const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_6gzqkl5', 'template_7xmd89k', form.current, 'dv-MCUb6GcnsrJSaQ')
+        .then((result) => {
+            console.log(result.text);
+            setStatusMessage('Email sent successfully')
+            setIsLoading(true)
+
+        }, (error) => {
+            console.log(error.text);
+            setStatusMessage(`${error.text} happened. Please try again`)
+        });
+        e.target.reset()
+    };
+
+  
+
+
+
   return (
     <motion.section 
     initial= {{scaleY: 0, opacity: 0}}
@@ -15,7 +43,7 @@ const Contact = () => {
             <div className='grid md:grid-cols-2 gap-20 md:pb-3'>
 
                 <div className=' flex flex-col items-left justify-center gap-10'>
-                    <div className=' flex flex-col items-left justify-center gap-14'>
+                    <div className=' flex flex-col items-left justify-center gap-5'>
                         <h1 className=' font-Abril text-1xl xs:text-2xl font-font-medium tracking-wide ss:tracking-wider ss:text-5xl md:text-4xl '>
                             <span>C</span>
                             <span>o</span>
@@ -42,22 +70,40 @@ const Contact = () => {
 
                     <div>
 
-                        <form action="https://formspree.io/f/xvongjpa" method='POST' className='flex flex-col gap-4'>
+                        <form ref={form} className='flex flex-col gap-4' onSubmit={sendEmail}>
                             <div className='flex flex-col items-center justify-center gap-8 ss:flex-row'>
-                                <input type="name" name='name' id='name' placeholder='Name' className='w-full h-20 rounded-xl text-xs border border-gray-500 bg-transparent pl-5 tracking-widest font-font_medium'/>
-                                <input type="email" name='email' id='email' placeholder='Email' className='w-full h-20 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium'/>
+                                <input type="name" name='name' id='name' placeholder='Name' className='w-full h-20 rounded-xl text-xs border border-gray-500 bg-transparent pl-5 tracking-widest font-font_medium' required/>
+                                <input type="email" name='email' id='email' placeholder='Email' className='w-full h-20 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium' required/>
                             </div>
                             <div>
-                                <input type="sunject" name='subject' id='subject' placeholder='Subject' className='w-full h-20 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium'/>
+                                <input type="sunject" name='subject' id='subject' placeholder='Subject' className='w-full h-20 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium' required/>
                             </div>
                             <div>
-                            <textarea name="message" id='message' placeholder='Message'  className='w-full h-56 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium '></textarea>
+                            <textarea name="message" id='message' placeholder='Message'  className='w-full h-44 rounded-xl text-xs border border-gray-500  bg-transparent pl-5 tracking-widest font-font_medium ' required></textarea>
                             </div>
                             <div className=' btn'>
                                 <button type='submit' className='  rounded-xl buttn text-sbase'>Contact me!</button>
 
                             </div>
+ 
                         </form>
+                        {
+                            isLoading &&
+                                <div className=' w-full min-h-screen fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center'>
+                                    <div className=' w-34 h-60 bg-gray-300 text-base flex items-center justify-center rounded-3xl tracking-wider text-green-500'>
+                                    <h1>
+                                        {
+                                            statusmessage
+                                        }
+                                    </h1>
+
+                                    </div>
+                                </div>
+
+                       
+                        }
+
+    
                     </div>
 
                 </div>

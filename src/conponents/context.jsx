@@ -3,7 +3,11 @@ import links from './links';
 
 
  
-const getTheme = localStorage.themes
+const getTheme = localStorage.themes;
+
+
+
+// const themeQuery = window.matchMedia('(prefers-color-scheme: darkTheme')
 
 
 const AppContext = React.createContext();
@@ -11,11 +15,13 @@ const AppContext = React.createContext();
 export const AppProvider = ({children})=> {
    
 
-    const [themes, setThemes] = useState(getTheme);
+    const [themes, setThemes] = useState(getTheme );
     const [linkdata, setLinkData] = useState(links);
     const [menutoggle, setMenuToggle] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
+    const [statusmessage, setStatusMessage] = useState('');
     const [linksindex, setLinksIndex] = useState(null);
+    const [values, setValues] = useState('')
 
 
     const linksButton = (index) =>{
@@ -30,24 +36,20 @@ export const AppProvider = ({children})=> {
 
     useEffect(()=>{
         linksButton
-},[])
+},[]);
 
+useEffect(()=>{
+   localStorage.theme = themes
+    
+},[themes]);
 
-
-
-    useEffect(()=>{
-
-        // localStorage.setItem('theme', JSON.stringify(themes));
-
-        localStorage.theme = themes
-        
-    },[themes])
-
-
+setTimeout(()=>{
+    setIsLoading(false)
+}, 1000);
 
     return(
         <AppContext.Provider value={{
-             themes, setThemes, menutoggle, setMenuToggle, isLoading, setIsLoading, linkdata, linksButton, linksindex
+             themes, setThemes, menutoggle, setMenuToggle, isLoading, setIsLoading, linkdata, linksButton, linksindex, statusmessage, setStatusMessage, values, setValues
         }}>
             {
                 children
