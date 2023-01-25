@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import { Icon } from '@iconify/react';
 import { NavLink } from 'react-router-dom';
 import { useGlobalContext } from './context';
+import close from '../assets/close.png';
 
 import 'animate.css';
 
@@ -20,9 +21,14 @@ const CTA = () => {
             menutoggle &&
         
 
-            <div className= ' w-screen h-90 fixed right-0 left-0 bottom-0 bg-lightgray_color'>
+            <div className= ' w-full h-screen fixed right-0 left-0 bottom-0 bg-lightgray_color'>
 
-                <div className={` ${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} duration-500 w-40 h-90 flex flex-col items-center justify-center pt-28 gap-5  rounded-tl-3xl rounded-bl-3xl text-xs tracking-wide fixed right-0 ${menutoggle? ' slideIn' : 'null'} pr-6`}>
+                <div className={` ${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} duration-500 w-40 h-screen flex flex-col items-center justify-between pt-52 gap-8  rounded-tl-3xl rounded-bl-3xl text-xs tracking-wide fixed right-0 ${menutoggle? ' slideIn' : 'null'}`}>
+
+                    <div className=' absolute top-0 pt-9  flex items-center justify-center cursor-pointer' onClick={()=> setMenuToggle(false)}>
+                        <img src={close} alt=""  className=' w-10 invert'/>
+
+                    </div>
                     {
                         linkdata.map((item, index) => {
                             
@@ -48,7 +54,7 @@ const CTA = () => {
                         })
                     }
 
-                    <div className=' pt-28'>
+                    <div className=' pb-11'>
                         <button className= {`${themes? ' bg-gray-500' : 'bg-secondary'} border-2 w-20 h-109 rounded-full text-base flex items-center`} onClick={()=>{
                         setThemes((prev)=>!prev)
                         }}>
