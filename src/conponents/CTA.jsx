@@ -25,12 +25,11 @@ const CTA = () => {
 
                 <div className={` ${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} duration-500 w-40 h-screen flex flex-col items-center justify-between rounded-tl-3xl rounded-bl-3xl text-xs tracking-wide fixed right-0 ${menutoggle? ' slideIn' : 'null'}`}>
 
-                    <div className=' flex items-center justify-center cursor-pointer' onClick={()=> setMenuToggle(false)}>
+                    <div className=' flex items-center justify-center cursor-pointer translate-y-16' onClick={()=> setMenuToggle(false)}>
                         <img src={close} alt=""  className=' w-10 invert'/>
-
                     </div>
 
-                    <div>
+                    <div className=' flex flex-col items-center justify-center gap-3'>
                     {
                         linkdata.map((item, index) => {
                             
@@ -58,7 +57,7 @@ const CTA = () => {
 
                     </div>
 
-                    <div className=' '>
+                    <div className=' -translate-y-5 '>
                         <button className= {`${themes? ' bg-gray-500' : 'bg-secondary'} border-2 w-20 rounded-full text-base flex items-center`} onClick={()=>{
                         setThemes((prev)=>!prev)
                         }}>
