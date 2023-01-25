@@ -35,8 +35,8 @@ const CTA = () => {
                             return (
                                 <React.Fragment key={index}>
                                     <div id='animateParent'>
-                                    <ul id='mobile-links-transition' onClick={()=> setMenuToggle(false)}>
-                                        <li className= ' cursor-pointer' >
+                                    <ul id='mobile-links-transition' >
+                                        <li className= ' cursor-pointer'>
                                             <NavLink to={item.path} className=' flex flex-col items-center justify-center' onClick={()=>{
                                                  setMenuToggle(false);
                                                  linksButton(index);

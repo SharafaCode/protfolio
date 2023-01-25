@@ -38,7 +38,7 @@ const About = () => {
                  <div className=' flex flex-col gap-5 text-gray_color text-sm'>
                     <p>
 
-                    Hello, my name is Bashi, I'm a Front-End Developer from Nigeria(West Africa) with great passion for building an interactive websites.
+                    Hello, my name is Bash, I'm a Front-End Web Developer from Nigeria(West Africa) with great passion for building an interactive websites.
                     
                     </p>
 
@@ -47,7 +47,7 @@ const About = () => {
                     Well-organised person, problem solver, independent employee with high attention to details. And oh, i love food, alot 🥰.
                     </p>
                     <p>
-                    I have a Degree in Computer Science and 2.5 years experience as an IT Support Specialist.
+                    I have a Degree in Computer Science and 2.5 years experience as an IT Onsite Support Specialist.
                     </p>
                     <p>
                      And one year experience using various front-end technologies.
