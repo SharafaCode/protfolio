@@ -7,7 +7,7 @@ import { useGlobalContext } from './context';
 
 
 const Contact = () => {
-    const { statusmessage, setStatusMessage, isLoading, setIsLoading, values, setValues } = useGlobalContext();
+    const { statusmessage, setStatusMessage, isLoading, setIsLoading,} = useGlobalContext();
 
 
     const form = useRef();

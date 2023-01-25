@@ -21,8 +21,8 @@ export const AppProvider = ({children})=> {
     const [isLoading, setIsLoading] = useState(false);
     const [statusmessage, setStatusMessage] = useState('');
     const [linksindex, setLinksIndex] = useState(null);
-    const [values, setValues] = useState('')
 
+    menutoggle? document.body.style.overflow ='hidden' :document.body.style.overflow = 'auto';
 
     const linksButton = (index) =>{
 
@@ -49,7 +49,7 @@ setTimeout(()=>{
 
     return(
         <AppContext.Provider value={{
-             themes, setThemes, menutoggle, setMenuToggle, isLoading, setIsLoading, linkdata, linksButton, linksindex, statusmessage, setStatusMessage, values, setValues
+             themes, setThemes, menutoggle, setMenuToggle, isLoading, setIsLoading, linkdata, linksButton, linksindex, statusmessage, setStatusMessage,
         }}>
             {
                 children

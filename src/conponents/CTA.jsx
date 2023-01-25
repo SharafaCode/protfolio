@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useGlobalContext } from './context';
 import close from '../assets/close.png';
 
-import 'animate.css';
+
 
 
 const CTA = () => {
