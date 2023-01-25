@@ -14,9 +14,6 @@ const Header = () => {
   const {themes, setThemes, menutoggle, setMenuToggle, linkdata, linksindex, linksButton} = useGlobalContext();
 
 
-  menutoggle? document.body.style.overflowY ='hidden' : document.body.style.overflowY = 'auto';
-
-
   return (
     <header className= {` ${themes? 'bg-primary text-text_color' : 'bg-white text-primary'} fixed top-0 right-0 w-full h-26 lg:w-85 overflow-hidden pt-3 pb-3 z-50 border-b border-b-gray-500`} >
         <nav className='w-90 m-auto'>
