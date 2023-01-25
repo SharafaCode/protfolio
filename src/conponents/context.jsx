@@ -24,7 +24,7 @@ export const AppProvider = ({children})=> {
     const [linksindex, setLinksIndex] = useState(null);
     
 
-    menutoggle? document.body.style.overflow ='hidden' :document.body.style.overflow = 'auto';
+    // menutoggle? document.body.style.overflowY ='hidden' : document.body.style.overflowY = 'auto';
 
     const linksButton = (index) =>{
 

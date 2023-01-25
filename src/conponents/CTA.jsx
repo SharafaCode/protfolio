@@ -37,7 +37,10 @@ const CTA = () => {
                                     <div id='animateParent'>
                                     <ul id='mobile-links-transition' onClick={()=> setMenuToggle(false)}>
                                         <li className= ' cursor-pointer' >
-                                            <NavLink to={item.path} className=' flex flex-col items-center justify-center' onClick={()=> linksButton(index)}>
+                                            <NavLink to={item.path} className=' flex flex-col items-center justify-center' onClick={()=>{
+                                                 setMenuToggle(false);
+                                                 linksButton(index);
+                                            } }>
                                                 <div>
                                                 <img src={item.img} alt={item.title} className= {`${themes? 'invert-0' : ' invert'} w-12`} />
                                                 </div>
