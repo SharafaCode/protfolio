@@ -61,7 +61,7 @@ const Header = () => {
 
               <div className=' lg:hidden cursor-pointer' onClick={()=> setMenuToggle((prev)=> !prev)}>
                 <span>
-              <img src={menu} alt="menu" className={`${themes? ' invert' : ' invert-0'} w-10 cursor-pointer`} />
+                  <img src={menu} alt="menu" className={`${themes? ' invert' : ' invert-0'} w-10 cursor-pointer`} />
                 </span>
               </div>
                 

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import { Icon } from '@iconify/react';
 import { NavLink } from 'react-router-dom';
 import { useGlobalContext } from './context';
@@ -9,10 +9,8 @@ import close from '../assets/close.png';
 
 const CTA = () => {
 
-    const {themes, setThemes, menutoggle, setMenuToggle, linkdata, linksindex, linksButton} = useGlobalContext();
+    const {themes, setThemes, menutoggle, setMenuToggle, linkdata, linksButton} = useGlobalContext();
 
-
-    
 
   return (
     
@@ -21,15 +19,15 @@ const CTA = () => {
             menutoggle &&
         
 
-            <div className= ' w-full min-h-screen fixed right-0 left-0 bottom-0 bg-lightgray_color'>
+            <div className= ' w-full min-h-screen fixed right-0 left-0 bottom-0 bg-lightgray_color' >
 
-                <div className={` ${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} duration-500 w-40 h-95 mt-26  flex flex-col items-center justify-between rounded-tl-3xl rounded-bl-3xl text-xs tracking-wide fixed right-0 ${menutoggle? ' slideIn' : 'null'}`}>
+                <div className={` ${themes? ' bg-cta_bg_color text-primary font-font_semiMedium ' : ' bg-black text-text_color font-font_medium'} duration-500 w-40 min-h-screen  flex flex-col items-center justify-between rounded-tl-3xl rounded-bl-3xl text-xs tracking-wide fixed right-0 ${menutoggle? ' slideIn' : 'null'}`}>
 
                     <div className=' flex items-center justify-center cursor-pointer translate-y-7' onClick={()=> setMenuToggle(false)}>
                         <img src={close} alt=""  className=' w-10 invert'/>
                     </div>
 
-                    <div className=' flex flex-col items-center justify-center gap-3'>
+                    <div className=' flex flex-col items-center justify-center gap-5'>
                     {
                         linkdata.map((item, index) => {
                             
@@ -57,7 +55,7 @@ const CTA = () => {
 
                     </div>
 
-                    <div className=' -translate-y-16 '>
+                    <div className=' -translate-y-5 '>
                         <button className= {`${themes? ' bg-gray-500' : 'bg-secondary'} border-2 w-20 rounded-full text-base flex items-center`} onClick={()=>{
                         setThemes((prev)=>!prev)
                         }}>
@@ -90,4 +88,4 @@ const CTA = () => {
   )
 }
 
-export default CTA
+export default CTA;
