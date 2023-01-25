@@ -52,8 +52,8 @@ const links = [
     },
     {
       id: 7,
-      title: "blog",
-      path: 'blog',
+      title: "blogs",
+      path: 'blogs',
       img: blog,
     }
   ];

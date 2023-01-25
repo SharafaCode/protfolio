@@ -13,7 +13,7 @@ transition={{duration:0.5}}
             <div>
                 <div>
                     <div>
-                        <h1>
+                        <h1 className=' text-lg'>
                             Coming Soon......................
                         </h1>
                     </div>
