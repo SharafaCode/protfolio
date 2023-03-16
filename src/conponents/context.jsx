@@ -2,7 +2,9 @@ import React, { useContext, useState, useEffect, useRef } from "react";
 import links from './links';
 
  
-const getTheme = localStorage.getItem('theme')
+const getTheme = ()=>{
+    return JSON.parse(localStorage.getItem('theme'));
+}
 
 
 
