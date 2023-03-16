@@ -11,77 +11,22 @@ BUTTON STYLING DESIGN
 
 **********/
 
-.active{
-  position: relative;
-  width: fit-content;
-  height: fit-content;
-  border-radius: 1rem;
-  padding: .4rem;
-  cursor: pointer;
-  padding: .7rem;
-   background: rgba(129, 129, 129, 0.671);
-
-}
-
-
-/* #mobile-links-active::after{
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: all .5s ease-in-out;
-  border-radius: .4rem;
-  z-index: -100;
-  background: rgba(129, 129, 129, 0.671);
-  
-} */
-
-/* #mobile-links-active:hover:after{
-  background: rgba(129, 129, 129, 0.671);
-  backdrop-filter: blur(1px);
-  transition: all .5s ease-in-out;
-
-} */
-
-#mobile-links-transition{
-  position: relative;
-  width: fit-content;
-  height: fit-content;
-  padding: .4rem;
-  cursor: pointer;
-
-  padding: .7rem;
-  border-radius: 1rem;
-
-}
-
-#mobile-links-transition::after{
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: all .5s ease-in-out;
-  border-radius: .4rem;
-  z-index: -100;
+  .active{
+    
+    cursor: pointer;
+    width: 20rem;
     border-radius: 1rem;
-  
-  
-}
+    background: rgba(129, 129, 129, 0.747);
+    padding: .6rem 1.4rem .6rem 1.4rem;
 
-#mobile-links-transition:hover:after{
-  background: rgba(129, 129, 129, 0.671);
-  backdrop-filter: blur(1px);
-  transition: all .5s ease-in-out;
+  }
 
-}
+  /* .active:hover{
+
+    background: transparent;
+
+  } */
+
 
   /*********** 
 
@@ -89,13 +34,13 @@ BUTTON STYLING DESIGN
 
 **********/
 
-  /*********** 
+  /***********  */
 
 ACTIVE LARGE SCREEN NAVLINKS TRANSITION STYLING DESIGN 
 
 **********/
 
-  #large-navlink-active{
+  /* #large-navlink-active{
     position: relative;
     background: transparent;
     padding: .6rem 1.4rem .6rem 1.4rem;
@@ -114,19 +59,21 @@ ACTIVE LARGE SCREEN NAVLINKS TRANSITION STYLING DESIGN
     left: 0;
     right: 0;
     bottom: 0;
-    transition: all .6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    transition: all .2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
     border-radius: 1rem;
     z-index: -100;
     
   }
   
   #large-navlink-active:hover:after{
+    
     background: rgba(129, 129, 129, 0.747);
     padding: .6rem 2rem .6rem 2rem;
     backdrop-filter: blur(1px);
     transition: all .6s ease-in-out;
+    height: 4rem;
 
-  }
+  } */
 
   /*********** 
 
@@ -167,7 +114,7 @@ LARGE SCREEN NAVLINKS TRANSITION STYLING DESIGN
   }
   
   #large-navlink-transition:hover:after{
-    background: rgba(129, 129, 129, 0.747);
+    /* background: rgba(129, 129, 129, 0.747); */
     padding: .6rem 2rem .6rem 2rem;
     backdrop-filter: blur(1px);
     transition: all .6s ease-in-out;
@@ -183,10 +130,6 @@ LARGE SCREEN NAVLINKS TRANSITION STYLING DESIGN
 
 
   /*********** 
-
-
-
-
 
 
 /*********** 

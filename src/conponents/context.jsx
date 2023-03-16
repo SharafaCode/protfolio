@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
 import links from './links';
 
-
  
 const getTheme = localStorage.getItem('theme')
 
@@ -36,9 +35,9 @@ export const AppProvider = ({children})=> {
         setLinksIndex(index);
     }
 
-    useEffect(()=>{
-        linksButton
-},[]);
+//     useEffect(()=>{
+//         linksButton
+// },[]);
 
 
 
@@ -51,6 +50,8 @@ useEffect(()=>{
    localStorage.setItem('theme', JSON.stringify(themes))
     
 },[themes]);
+
+
 
 
     return(

@@ -41,16 +41,21 @@ const NavLinks = () => {
                         linkdata.map((item, index)=>{
                             return(
                                 <div key={index} id='animateParent'>
-                                    <ul key={item.id}  className=' flex items-center justify-left overflow-y-hidden' id='large-navlink-transition' onClick={()=> linksButton(index)}>
+                                    <ul key={item.id}  className=' flex items-center justify-left overflow-y-hidden pt-4' >
                                         <li className= 'cursor-pointer' >
-                                            <NavLink to={item.path} className='flex items-center justify-center gap-8'>
+                                            <NavLink to={item.path} className='flex items-center justify-center gap-8' onClick={()=> linksButton(index)} >
+                                      
                                             <div>
                                             <img src={item.img} alt={item.title} className= {`${themes? 'invert' : ' invert-0'} w-10`} />
 
                                             </div>
                                             <div>
+                                                <span>
+
                                                 {item.title}
+                                                </span>
                                             </div>
+                                        
                                             </NavLink>
                                         </li>
                                     </ul>

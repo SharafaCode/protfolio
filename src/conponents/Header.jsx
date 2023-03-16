@@ -58,11 +58,32 @@ const Header = () => {
                   }
                 </button>
               </div>
-
+{/* 
               <div className=' lg:hidden cursor-pointer' onClick={()=> setMenuToggle((prev)=> !prev)}>
                 <span>
                   <img src={menu} alt="menu" className={`${themes? ' invert' : ' invert-0'} w-10 cursor-pointer`} />
                 </span>
+              </div> */}
+
+              <div className=' lg:hidden'>
+                <button className= {`${themes? ' bg-gray-500' : 'bg-secondary'} border-2 w-20 rounded-full text-base flex items-center`} onClick={()=>{
+                setThemes((prev)=>!prev)
+                }}>
+                {
+                    !themes &&
+                <span >
+                <Icon icon="line-md:sun-rising-filled-loop" className='w-10 h-10 rounded-full bg-primary translate-x-0 text-yellow-400'/>
+                </span>
+
+                }
+                {
+                    themes &&
+                
+                    <span>
+                    <Icon icon="line-md:sunny-filled-loop-to-moon-filled-loop-transition" className= {`${themes? 'translate-x-full transition-all duration-500 ease-in-out': '-translate-x-0 transition-all duration-500 ease-in-out'} w-10 h-10 rounded-full bg-primary text-yellow-400 -ml-2`} />
+                    </span>
+                }
+                </button>
               </div>
                 
             </div>
